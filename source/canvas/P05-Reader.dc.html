@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>05 单页变双页</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.ln.sm{height:5px}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.pri{background:#F5A653}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.pri i{border-color:#2B1A08}
+.ri i.c{border-radius:999px}
+.ri i.bk{border-width:0 0 2px 2px;border-radius:0;transform:rotate(45deg);width:9px;height:9px;margin-left:3px}
+.rail.s{width:34px}
+.rail.s .ri{width:28px;height:28px;border-radius:9px}
+.rail.s .ri i{width:12px;height:12px}
+.rail.s .ri i.bk{width:8px;height:8px}
+.gap{flex:1}
+.hinge{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.page{flex:1;background:#FBFAF6;padding:30px 34px;display:flex;flex-direction:column;gap:13px}
+.pn{margin-top:auto;font-size:12px;color:#66655E;text-align:center}
+.bar{height:6px;border-radius:3px;background:#ECEBE5;overflow:hidden}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:19px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{margin-top:auto;padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{display:flex;justify-content:space-between;align-items:baseline;font-size:18px;font-weight:700}
+.lab span{font-size:14px;font-weight:400;color:#66655E}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 适配模式 05</div>
+  <h1 style="margin:12px 0 0;font-size:64px;line-height:1.15;font-weight:900">单页 → 双页</h1>
+  <p style="margin:12px 0 0;font-size:24px;color:#4F4E48">阅读、漫画、PDF：书脊对准折痕，半折就是一本书</p>
+  <div class="lab" style="margin-top:28px">展开 · 内屏横向 <span>951 × 669 pt · Regular · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="padding:24px;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;height:30px;font-size:13px;color:#66655E"><span>第三章 · 占位标题</span><span>轻点屏幕显示工具栏</span></div>
+      <div style="flex:1;display:flex;min-height:0;border-radius:14px;overflow:hidden">
+        <div class="page">
+          <div style="font-size:16px;font-weight:700;margin-bottom:4px">段落占位</div>
+          <sc-for list="{{left}}" as="l" hint-placeholder-count="14"><div class="ln" style="width:{{l.w}}"></div></sc-for>
+          <div class="pn">— 42 —</div>
+        </div>
+        <div style="width:24px;flex:none;background:linear-gradient(90deg,#F3F1EA,#E6E3DA 50%,#F3F1EA)"></div>
+        <div class="page">
+          <sc-for list="{{right}}" as="l" hint-placeholder-count="15"><div class="ln" style="width:{{l.w}}"></div></sc-for>
+          <div class="pn">— 43 —</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:12px;color:#66655E"><span>42 / 180</span><div class="bar" style="flex:1"><div style="width:24%;height:100%;background:#F5A653"></div></div><span>剩余约 2 小时</span></div>
+    </div>
+    <div class="hinge"></div><div class="hl">书脊 = 折痕</div>
+  </div>
+  <div style="margin-top:36px;display:flex;gap:44px">
+    <div class="dev" style="width:280px;height:408px;border-radius:28px;flex:none">
+      <div class="main" style="padding:14px 8px 14px 12px;gap:8px">
+        <div style="font-size:12px;color:#66655E">第三章</div>
+        <div class="page" style="padding:14px 14px;gap:10px;border-radius:10px">
+          <div style="font-size:12px;font-weight:700">段落占位</div>
+          <sc-for list="{{narrow}}" as="l" hint-placeholder-count="15"><div class="ln sm" style="width:{{l.w}}"></div></sc-for>
+          <div class="pn" style="font-size:10px">— 42 —</div>
+        </div>
+      </div>
+      <div class="rail s" style="padding:14px 0">
+        <div class="ri"><i class="bk"></i></div><div class="ri pri"><i class="c"></i></div><div class="ri"><i></i></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px">
+      <div class="lab">折叠 · 外屏 <span>466 × 678 pt · Compact</span></div>
+      <div class="tip"><div class="tipn">1</div><div>不要把一页拉宽：中文一行 30–40 字最舒服</div></div>
+      <div class="tip"><div class="tipn">2</div><div>切换时按“当前段落”定位，而不是页码</div></div>
+      <div class="tip"><div class="tipn duo">3</div><div>外屏返回、字号、书签都在右侧竖栏，返回永远在最上面</div></div>
+      <div class="code">
+        <div style="font-weight:700;margin-bottom:4px">SwiftUI 实现提示</div>
+        <code>ViewThatFits { 双页HStack; 单页 }</code><br>宽度放得下两页才显示两页
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ws = ['100%','96%','100%','92%','100%','70%','100%','98%','94%','100%','86%','60%','100%','95%','100%','88%'];
+    const mk = (n, off) => Array.from({ length: n }, (_, i) => ({ w: ws[(i + off) % ws.length] }));
+    return { left: mk(14, 0), right: mk(15, 5), narrow: mk(15, 2) };
+  }
+}
+</script>
+</body>
+</html>

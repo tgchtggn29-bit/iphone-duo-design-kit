@@ -1,0 +1,21 @@
+{
+  "name": "iphone-duo-design-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Layout patterns, editable cards and an interactive fold lab for the foldable iPhone (iPhone Duo).",
+  "license": "MIT",
+  "scripts": {
+    "render": "node scripts/render.cjs",
+    "serve": "npx --yes http-server docs -p 8080 -c-1",
+    "build-cards": "node scripts/build-cards.cjs source/canvas",
+    "sync-data": "node -e \"require('fs').copyFileSync('data/patterns.json','docs/patterns.json')\""
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit.git"
+  },
+  "keywords": ["iphone-duo", "foldable", "ios", "swiftui", "design-system", "layout", "adaptive-layout"]
+}

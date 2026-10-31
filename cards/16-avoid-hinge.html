@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>16 避开折痕</title>
+<!-- 16-avoid-hinge · iPhone Duo Design Kit · CC BY 4.0 · github.com/tgchtggn29-bit/iphone-duo-design-kit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Noto Sans SC';font-weight:400;src:local('Noto Sans SC'),local('Noto Sans CJK SC'),local('NotoSansCJKsc-Regular'),local('Source Han Sans SC');}
+@font-face{font-family:'Noto Sans SC';font-weight:500;src:local('Noto Sans SC'),local('Noto Sans CJK SC Medium'),local('NotoSansCJKsc-Medium'),local('Source Han Sans SC Medium');}
+@font-face{font-family:'Noto Sans SC';font-weight:700;src:local('Noto Sans SC'),local('Noto Sans CJK SC Bold'),local('NotoSansCJKsc-Bold'),local('Source Han Sans SC Bold');}
+@font-face{font-family:'Noto Sans SC';font-weight:900;src:local('Noto Sans SC'),local('Noto Sans CJK SC Black'),local('NotoSansCJKsc-Black'),local('Source Han Sans SC Black');}
+</style>
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.ph{background:#E9E8E2;border-radius:10px}
+.ln{height:6px;border-radius:3px;background:#E9E8E2;flex:none}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E08A2E}
+.hh{position:absolute;left:0;right:0;top:50%;border-top:2px dashed #E08A2E}
+.alert{background:#FFFFFF;border-radius:16px;box-shadow:0 10px 30px rgba(31,31,28,0.18);padding:16px;display:flex;flex-direction:column;gap:10px;width:200px}
+.ab{height:34px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.vid{background:#2A2925;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#D8D6CE;font-size:12px}
+.pl{width:46px;height:46px;border-radius:999px;background:#F5A653;flex:none}
+.sk{width:34px;height:34px;border-radius:999px;background:#EFEEE9;flex:none}
+.g{display:grid;gap:6px}
+.c{height:44px;border-radius:8px;background:#E9E8E2}
+.c.on{background:#FDE3C8}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#E08A2E;color:#1F1F1C;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.lab{font-size:18px;font-weight:700}
+.lab span{font-size:14px;font-weight:400;color:#66655E;margin-left:8px}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+</style>
+</head>
+<body style="margin:0">
+<div style="position:relative;width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 适配模式 16 · AVOID THE HINGE</div>
+  <h1 style="margin:12px 0 0;font-size:64px;line-height:1.15;font-weight:900">避开折痕</h1>
+  <p style="margin:12px 0 0;font-size:24px;color:#4F4E48">半折时：能点的东西挪开，能滚的内容照常</p>
+  <div class="lab" style="margin-top:28px">书本姿态<span>竖向折痕 · 弹窗移到后侧</span></div>
+  <div style="margin-top:10px;display:flex;gap:36px">
+    <div class="dev" style="width:560px;height:394px;border-radius:28px;padding:18px;gap:36px">
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px"><div style="font-size:15px;font-weight:900">列表占位</div><div class="ph" style="height:46px"></div><div class="ph" style="height:46px"></div><div class="ph" style="height:46px"></div><div class="ph" style="height:46px"></div><div class="ph" style="height:46px"></div></div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;background:#F7F6F2;border-radius:14px">
+        <div class="alert"><div style="font-size:14px;font-weight:900">确认删除？</div><div class="ln" style="width:90%"></div><div class="ab" style="background:#F5A653;color:#2B1A08">删除</div><div class="ab" style="background:#F2F1EC">取消</div></div>
+      </div>
+      <div class="vh"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px;padding-top:4px">
+      <div class="tip"><div class="tipn">1</div><div>弹窗、菜单、气泡不再居中，整体移到后侧（右半面）</div></div>
+      <div class="tip"><div class="tipn">2</div><div>相关元素一起移动，移动幅度尽量小，不重新设计</div></div>
+      <div class="tip"><div class="tipn">3</div><div>系统弹窗、Sheet、分栏会自动处理；自定义浮层要自己挪</div></div>
+    </div>
+  </div>
+  <div class="lab" style="margin-top:36px">桌面 / 帐篷姿态<span>横向折痕 · 上看下点</span></div>
+  <div style="margin-top:10px;display:flex;gap:36px">
+    <div class="dev" style="width:264px;height:376px;border-radius:26px;flex-direction:column;padding:16px;gap:28px;flex:none">
+      <div class="vid" style="flex:1">视频 / 歌词 / 封面</div>
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px"><div class="ln" style="width:100%;height:5px;background:#D6D4CC"></div><div style="display:flex;justify-content:center;align-items:center;gap:20px"><div class="sk"></div><div class="pl"></div><div class="sk"></div></div></div>
+      <div class="hh"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:14px">
+      <div class="tip"><div class="tipn">4</div><div>需要“远看”的内容放上半，需要点的控件放下半</div></div>
+      <div style="display:flex;gap:18px;align-items:center;margin-top:4px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;position:relative">
+          <div style="font-size:13px;color:#66655E">✗ 3 列：中间那列压在折痕上</div>
+          <div class="g" style="grid-template-columns:repeat(3, minmax(0, 1fr))"><div class="c"></div><div class="c on"></div><div class="c"></div><div class="c"></div><div class="c on"></div><div class="c"></div></div>
+          <div style="position:absolute;top:26px;bottom:0;left:50%;border-left:2px dashed #E08A2E"></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;position:relative">
+          <div style="font-size:13px;color:#66655E">✓ 2 列：折痕落在列缝</div>
+          <div class="g" style="grid-template-columns:repeat(2, minmax(0, 1fr));column-gap:18px"><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div></div>
+          <div style="position:absolute;top:26px;bottom:0;left:50%;border-left:2px dashed #E08A2E"></div>
+        </div>
+      </div>
+      <div class="tip"><div class="tipn">5</div><div>可滚动内容不需要避让，平展时折痕宽度为 0</div></div>
+    </div>
+  </div>
+  <div class="code" style="margin-top:28px">
+    <div style="font-weight:700;margin-bottom:4px">实现提示 · iOS 27.1（API 以正式 SDK 为准）</div>
+    用 <code>GeometryProxy</code> 的 reservedRegion 读取折痕“分隔区”；内屏前置摄像头运行时还有一块“遮挡区”
+  </div>
+  <div style="position:absolute;bottom:26px;right:64px;font:500 14px/1 'Noto Sans SC',sans-serif;color:#8A8781;letter-spacing:0.02em">github.com/tgchtggn29-bit/iphone-duo-design-kit</div>
+</div>
+</body>
+</html>

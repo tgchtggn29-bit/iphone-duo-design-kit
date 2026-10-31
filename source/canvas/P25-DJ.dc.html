@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>25 DJ 双碟 对称布局</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.deck{flex:1;display:flex;flex-direction:column;align-items:center;gap:14px}
+.plat{border-radius:999px;background:#2A2925;display:flex;align-items:center;justify-content:center;position:relative}
+.plat::before{content:'';position:absolute;inset:14%;border-radius:999px;border:1.5px solid #4A4843}
+.plat i{width:22%;height:22%;border-radius:999px;background:#F5A653;position:relative}
+.wave{height:34px;border-radius:8px;background:repeating-linear-gradient(90deg,#E2E0D8 0 3px,transparent 3px 6px);align-self:stretch}
+.wave.a{background:repeating-linear-gradient(90deg,#F6CFA6 0 3px,transparent 3px 6px)}
+.pads{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:8px;align-self:stretch}
+.pad{height:40px;border-radius:10px;background:#EFEEE9}
+.pad.on{background:#FDE3C8}
+.btns{display:flex;gap:10px}
+.b{width:56px;height:56px;border-radius:999px;background:#EFEEE9;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#4F4E48}
+.b.p{background:#F5A653;color:#2B1A08}
+.xf{position:absolute;left:50%;transform:translateX(-50%);height:44px;width:220px;border-radius:12px;background:#FFF4E8;border:2px solid #E08A2E;display:flex;align-items:center;justify-content:center}
+.xf i{width:180px;height:6px;border-radius:3px;background:#E2E0D8;position:relative}
+.xf i::after{content:'';position:absolute;left:78px;top:-9px;width:24px;height:24px;border-radius:6px;background:#1F1F1C}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.vs{width:10px;border-radius:5px;background:#E9E8E2;position:relative;align-self:stretch}
+.vs::after{content:'';position:absolute;left:-6px;top:30%;width:22px;height:14px;border-radius:4px;background:#1F1F1C}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+.lab{font-size:16px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+.seg{display:flex;gap:3px;background:#EFEEE9;border-radius:999px;padding:3px}
+.seg span{flex:1;text-align:center;padding:3px 0;border-radius:999px;font-size:10px;color:#66655E}
+.seg span.on{background:#FFFFFF;color:#1F1F1C;font-weight:700}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 25</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">DJ 双碟 · 对称布局</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">两件对等的东西，正好一面一个：折痕就是天然的分界</p>
+  <div class="ref"><b>参考</b>edjing Mix · 来自 Apple 开发者案例</div>
+  <div class="lab" style="margin-top:26px">展开 · 平放<span>左碟 A · 右碟 B · 中间混音</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:600px;border-radius:36px">
+    <div class="main" style="padding:26px 30px 90px;flex-direction:row;gap:72px">
+      <div class="deck"><div class="wave a"></div><div class="plat" style="width:240px;height:240px"><i></i></div><div class="pads"><div class="pad on"></div><div class="pad"></div><div class="pad"></div><div class="pad"></div></div><div class="btns"><div class="b">CUE</div><div class="b p">播放</div></div></div>
+      <div class="deck"><div class="wave"></div><div class="plat" style="width:240px;height:240px"><i></i></div><div class="pads"><div class="pad"></div><div class="pad"></div><div class="pad on"></div><div class="pad"></div></div><div class="btns"><div class="b">CUE</div><div class="b p">播放</div></div></div>
+    </div>
+    <div class="vh"></div>
+    <div class="xf" style="bottom:24px"><i></i></div>
+    <div class="hl" style="left:50%;bottom:76px;transform:translateX(-50%)">⚠ 推子压在折痕上：平放可以，半折就难推</div>
+  </div>
+  <div style="margin-top:28px;display:flex;gap:24px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:8px;flex:none">
+      <div class="lab">半折时<span>推子拆开</span></div>
+      <div class="dev" style="width:340px;height:239px;border-radius:22px">
+        <div class="main" style="padding:14px;flex-direction:row;gap:30px">
+          <div style="flex:1;display:flex;gap:10px;align-items:center"><div class="plat" style="width:110px;height:110px"><i></i></div><div class="vs" style="margin:30px 0"></div></div>
+          <div style="flex:1;display:flex;gap:10px;align-items:center;flex-direction:row-reverse"><div class="plat" style="width:110px;height:110px"><i></i></div><div class="vs" style="margin:30px 0"></div></div>
+        </div>
+        <div class="vh"></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;flex:none">
+      <div class="lab">折叠<span>一次一碟</span></div>
+      <div class="dev" style="width:164px;height:239px;border-radius:20px">
+        <div class="main" style="padding:10px;gap:10px;align-items:center">
+          <div class="seg" style="align-self:stretch"><span class="on">A</span><span>B</span></div>
+          <div class="plat" style="width:110px;height:110px"><i></i></div>
+          <div style="display:flex;gap:6px"><div class="b" style="width:36px;height:36px;font-size:9px">CUE</div><div class="b p" style="width:36px;height:36px;font-size:9px">播放</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding-top:28px">
+      <div class="tip"><div class="tipn duo">1</div><div>对等内容左右镜像摆，折痕当分隔线</div></div>
+      <div class="tip"><div class="tipn duo">2</div><div>横跨中线的控件只在平展时出现；半折改成两侧各一个</div></div>
+      <div class="tip"><div class="tipn">3</div><div>折叠后用 A / B 切换，功能不少</div></div>
+    </div>
+  </div>
+  <div class="code" style="margin-top:22px">同类场景：双人对战小游戏、中英对照翻译、两个账户对比、左右分屏比价</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

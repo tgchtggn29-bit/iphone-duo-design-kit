@@ -1,0 +1,26 @@
+name: New pattern · 新模式
+description: Suggest a layout or scene that is not covered yet.
+labels: [new-pattern]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Pattern name · 模式名称
+    validations:
+      required: true
+  - type: dropdown
+    id: poses
+    attributes:
+      label: Poses · 涉及姿态
+      multiple: true
+      options: [closed, open, book, tabletop, tent, dual display]
+  - type: textarea
+    id: idea
+    attributes:
+      label: What changes between poses? · 不同姿态下怎么变？
+    validations:
+      required: true
+  - type: input
+    id: ref
+    attributes:
+      label: Real app or source · 参考 App 或资料

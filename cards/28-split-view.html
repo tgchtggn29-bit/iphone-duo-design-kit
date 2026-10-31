@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>28 分屏多任务</title>
+<!-- 28-split-view · iPhone Duo Design Kit · CC BY 4.0 · github.com/tgchtggn29-bit/iphone-duo-design-kit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Noto Sans SC';font-weight:400;src:local('Noto Sans SC'),local('Noto Sans CJK SC'),local('NotoSansCJKsc-Regular'),local('Source Han Sans SC');}
+@font-face{font-family:'Noto Sans SC';font-weight:500;src:local('Noto Sans SC'),local('Noto Sans CJK SC Medium'),local('NotoSansCJKsc-Medium'),local('Source Han Sans SC Medium');}
+@font-face{font-family:'Noto Sans SC';font-weight:700;src:local('Noto Sans SC'),local('Noto Sans CJK SC Bold'),local('NotoSansCJKsc-Bold'),local('Source Han Sans SC Bold');}
+@font-face{font-family:'Noto Sans SC';font-weight:900;src:local('Noto Sans SC'),local('Noto Sans CJK SC Black'),local('NotoSansCJKsc-Black'),local('Source Han Sans SC Black');}
+</style>
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative;flex:none}
+.app{flex:1;min-width:0;display:flex;border-radius:18px;overflow:hidden}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px}
+.rail.r{border-left:1.5px solid #F0EFEA}
+.rail.l{border-right:1.5px solid #E6E4DC}
+.ri{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.on{background:#FDE3C8}
+.ri.pri{background:#F5A653}
+.ri.on2{background:#DCE8E5}
+.ri.pri2{background:#7FA9A0}
+.ri i{display:block;width:14px;height:14px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.on i{border-color:#9A4A0C}
+.ri.pri i{border-color:#2B1A08}
+.ri.pri2 i{border-color:#14302B}
+.ri i.c{border-radius:999px}
+.gap{flex:1}
+.cal{display:grid;grid-template-columns:repeat(7, minmax(0, 1fr));gap:4px}
+.cal i{height:30px;border-radius:6px;background:#EEF3F1}
+.cal i.on{background:#7FA9A0}
+.row{display:flex;gap:10px;align-items:center;padding:9px;border-radius:12px}
+.row.on{background:#FDE3C8}
+.av{width:32px;height:32px;border-radius:999px;background:#E9E8E2;flex:none}
+.div{position:absolute;top:0;bottom:0;left:50%;width:14px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center}
+.div i{width:5px;height:56px;border-radius:3px;background:#1F1F1C}
+.hl{position:absolute;background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.w{flex:1;background:#FFFFFF;border:1.5px solid #DFDDD5;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.w b{font-size:16px}
+.w span{font-size:12px;color:#66655E;text-align:center;line-height:1.4}
+.mini{display:flex;gap:4px;border:1.5px solid #DCDAD2;border-radius:10px;padding:6px;box-sizing:border-box;background:#FFFFFF}
+.mini i{background:#E9E8E2;border-radius:4px}
+.mini i.on{background:#FDE3C8}
+.mini i.rl{background:#F0EFEA;width:10px;flex:none}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{font-size:16px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</head>
+<body style="margin:0">
+<div style="position:relative;width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 28 · SPLIT VIEW MULTITASKING</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">分屏多任务 · 你只拿到半块屏</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">iPhone 第一次支持两个 App 并排：你的 App 必须在半屏里也好用</p>
+  <div class="ref"><b>参考</b>Fantastical + Cardhop · 来自 Apple 开发者案例</div>
+  <div class="lab" style="margin-top:26px">内屏 · 两个 App 并排<span>各自的控件放在外侧边缘</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:600px;border-radius:36px;padding:10px;gap:14px;background:#E6E4DC">
+    <div class="app" style="background:#FFFFFF">
+      <div class="rail l" style="width:58px;padding:16px 0"><div class="ri pri2"><i class="c"></i></div><div class="gap"></div><div class="ri on2"><i></i></div><div class="ri"><i class="c"></i></div></div>
+      <div class="main" style="padding:18px 18px 18px 16px;gap:12px">
+        <div style="font-size:16px;font-weight:900">另一个 App · 日历</div>
+        <div class="cal"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div style="border-radius:12px;background:#EEF3F1;padding:12px;display:flex;flex-direction:column;gap:7px"><div class="ln" style="width:60%;background:#CFE0DC"></div><div class="ln" style="width:85%;background:#CFE0DC"></div></div>
+        <div style="border-radius:12px;background:#EEF3F1;padding:12px;display:flex;flex-direction:column;gap:7px"><div class="ln" style="width:50%;background:#CFE0DC"></div><div class="ln" style="width:75%;background:#CFE0DC"></div></div>
+      </div>
+    </div>
+    <div class="app" style="background:#FFFFFF">
+      <div class="main" style="padding:18px 16px 18px 18px;gap:4px">
+        <div style="font-size:16px;font-weight:900;margin-bottom:8px">你的 App · Compact 布局</div>
+        <div class="row on"><div class="av" style="background:#F5C08A"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px;font-weight:700">联系人 01</div><div class="ln" style="width:80%;background:#F6CFA6"></div></div></div>
+        <div class="row"><div class="av"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">联系人 02</div><div class="ln" style="width:70%"></div></div></div>
+        <div class="row"><div class="av"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">联系人 03</div><div class="ln" style="width:60%"></div></div></div>
+        <div class="row"><div class="av"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">联系人 04</div><div class="ln" style="width:75%"></div></div></div>
+        <div class="row"><div class="av"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">联系人 05</div><div class="ln" style="width:65%"></div></div></div>
+      </div>
+      <div class="rail r" style="width:58px;padding:16px 0"><div class="ri pri"><i class="c"></i></div><div class="gap"></div><div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div></div>
+    </div>
+    <div class="div"><i></i></div>
+    <div class="hl" style="left:50%;bottom:14px;transform:translateX(-50%)">分隔条在折痕上</div>
+  </div>
+  <div class="lab" style="margin-top:26px">同一个 App 的三种宽度</div>
+  <div style="margin-top:10px;display:flex;gap:12px">
+    <div class="w"><div class="mini" style="width:150px;height:105px"><i style="flex:1"></i><i class="on" style="flex:1.3"></i><i class="rl"></i></div><b>内屏全屏</b><span>列表 + 详情双栏</span></div>
+    <div class="w"><div class="mini" style="width:76px;height:105px"><i class="on" style="flex:1"></i><i class="rl"></i></div><b>分屏半屏</b><span>收成单栏，和外屏一样</span></div>
+    <div class="w"><div class="mini" style="width:72px;height:105px"><i class="on" style="flex:1"></i><i class="rl"></i></div><b>外屏</b><span>单栏 + 右侧竖栏</span></div>
+  </div>
+  <div style="margin-top:22px;display:flex;gap:24px">
+    <div style="flex:1.2;display:flex;flex-direction:column;gap:12px">
+      <div class="tip"><div class="tipn duo">1</div><div>分屏时各自的竖栏都靠外侧，中间留给内容</div></div>
+      <div class="tip"><div class="tipn">2</div><div>支持拖拽：把联系人直接拖进左边的日历</div></div>
+    </div>
+    <div class="code" style="flex:1">
+      <div style="font-weight:700;margin-bottom:4px">实现提示</div>
+      别读 <code>UIScreen.main</code>，读当前场景的尺寸和 size class
+    </div>
+  </div>
+  <div style="position:absolute;bottom:26px;right:64px;font:500 14px/1 'Noto Sans SC',sans-serif;color:#8A8781;letter-spacing:0.02em">github.com/tgchtggn29-bit/iphone-duo-design-kit</div>
+</div>
+</body>
+</html>

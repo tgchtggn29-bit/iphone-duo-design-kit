@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>14 播放 + 队列</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.cover{background:#FDE3C8;border-radius:18px;display:flex;align-items:center;justify-content:center;color:#9A4A0C;font-size:14px;flex:none}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.on{background:#FDE3C8}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.on i{border-color:#9A4A0C}
+.ri i.c{border-radius:999px}
+.ri i.dn{border-width:0 2px 2px 0;border-radius:0;transform:rotate(45deg);width:10px;height:10px;margin-top:-5px}
+.rail.s{width:34px}
+.rail.s .ri{width:28px;height:28px;border-radius:9px}
+.rail.s .ri i{width:12px;height:12px}
+.rail.s .ri i.dn{width:8px;height:8px}
+.hinge{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.trk{height:5px;border-radius:3px;background:#E9E8E2;position:relative;flex:none}
+.fill{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#1F1F1C}
+.ctr{display:flex;align-items:center;justify-content:center;gap:30px}
+.sk{width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.pl{width:56px;height:56px;border-radius:999px;background:#F5A653;display:flex;align-items:center;justify-content:center;border:0;flex:none}
+.pl span{width:6px;height:20px;background:#2B1A08;border-radius:2px;box-shadow:11px 0 0 #2B1A08;margin-right:11px}
+.q{display:flex;align-items:center;gap:12px;padding:8px;border-radius:12px}
+.q.on{background:#FDE3C8}
+.qa{width:40px;height:40px;border-radius:8px;background:#E9E8E2;flex:none}
+.q.on .qa{background:#F5C08A}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:19px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{margin-top:auto;padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{display:flex;justify-content:space-between;align-items:baseline;font-size:18px;font-weight:700}
+.lab span{font-size:14px;font-weight:400;color:#66655E}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 适配模式 14</div>
+  <h1 style="margin:12px 0 0;font-size:64px;line-height:1.15;font-weight:900">播放 + 队列</h1>
+  <p style="margin:12px 0 0;font-size:24px;color:#4F4E48">音乐、播客、有声书：左面正在播放，右面接下来</p>
+  <div class="lab" style="margin-top:28px">展开 · 内屏横向 <span>951 × 669 pt · Regular · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="padding:24px 0 24px 24px;flex-direction:row">
+      <div style="width:452px;flex:none;box-sizing:border-box;padding:20px 24px 0 4px;display:flex;flex-direction:column;align-items:center;gap:14px">
+        <div class="cover" style="width:300px;height:300px">封面占位</div>
+        <div style="align-self:stretch;display:flex;flex-direction:column;gap:6px;padding:0 40px"><div style="font-size:20px;font-weight:900">曲目名称占位</div><div style="font-size:13px;color:#66655E">艺人占位</div></div>
+        <div style="align-self:stretch;padding:0 40px;display:flex;flex-direction:column;gap:6px"><div class="trk"><div class="fill" style="width:38%"></div></div><div style="display:flex;justify-content:space-between;font-size:11px;color:#66655E"><span>1:24</span><span>3:42</span></div></div>
+        <div class="ctr"><div class="sk" style="border-right:14px solid #1F1F1C"></div><button class="pl" type="button" aria-label="暂停"><span></span></button><div class="sk" style="border-left:14px solid #1F1F1C"></div></div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:6px;padding:0 20px 0 28px;border-left:1.5px solid #F0EFEA">
+        <div style="font-size:15px;font-weight:700;height:40px;display:flex;align-items:center">接下来播放</div>
+        <div class="q on"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px;font-weight:700;color:#9A4A0C">曲目占位 01</div><div class="ln" style="width:55%;background:#F6CFA6"></div></div></div>
+        <div class="q"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">曲目占位 02</div><div class="ln" style="width:45%"></div></div></div>
+        <div class="q"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">曲目占位 03</div><div class="ln" style="width:60%"></div></div></div>
+        <div class="q"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">曲目占位 04</div><div class="ln" style="width:40%"></div></div></div>
+        <div class="q"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">曲目占位 05</div><div class="ln" style="width:50%"></div></div></div>
+        <div class="q"><div class="qa"></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">曲目占位 06</div><div class="ln" style="width:58%"></div></div></div>
+      </div>
+    </div>
+    <div class="rail" style="width:72px;padding:24px 0">
+      <div class="ri"><i class="dn"></i></div><div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+    </div>
+    <div class="hinge"></div><div class="hl">播放一面 · 队列一面</div>
+  </div>
+  <div style="margin-top:36px;display:flex;gap:44px">
+    <div class="dev" style="width:280px;height:408px;border-radius:28px;flex:none">
+      <div class="main" style="padding:16px 8px 14px 12px;gap:12px;align-items:center">
+        <div class="cover" style="width:190px;height:190px;font-size:12px">封面占位</div>
+        <div style="align-self:stretch;font-size:14px;font-weight:900">曲目名称占位</div>
+        <div class="trk" style="align-self:stretch"><div class="fill" style="width:38%"></div></div>
+        <div class="ctr" style="gap:22px;margin-top:6px"><div class="sk" style="border-right:12px solid #1F1F1C;border-top-width:8px;border-bottom-width:8px"></div><button class="pl" type="button" aria-label="暂停" style="width:46px;height:46px"><span style="height:16px;width:5px;box-shadow:9px 0 0 #2B1A08;margin-right:9px"></span></button><div class="sk" style="border-left:12px solid #1F1F1C;border-top-width:8px;border-bottom-width:8px"></div></div>
+      </div>
+      <div class="rail s" style="padding:14px 0">
+        <div class="ri"><i class="dn"></i></div><div class="ri"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px">
+      <div class="lab">折叠 · 外屏 <span>466 × 678 pt · Compact</span></div>
+      <div class="tip"><div class="tipn">1</div><div>封面保持正方形，按短边定尺寸；播放控件固定在封面下方</div></div>
+      <div class="tip"><div class="tipn duo">2</div><div>队列、歌词、投放是图标操作，进右侧竖栏；收起在最上</div></div>
+      <div class="tip"><div class="tipn duo">3</div><div>帐篷姿态：封面、歌词放上半，播放按钮放下半</div></div>
+      <div class="code">
+        <div style="font-weight:700;margin-bottom:4px">SwiftUI 实现提示</div>
+        <code>@Environment(\.horizontalSizeClass) var size</code><br>size == .regular 时并排显示队列
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

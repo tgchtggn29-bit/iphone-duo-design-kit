@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>22 视频会议</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.ph{background:#E9E8E2;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#66655E;font-size:13px}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.p{background:#2A2925;border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center}
+.p i{width:44px;height:44px;border-radius:999px;background:#4A4843}
+.p.sp{box-shadow:inset 0 0 0 3px #F5A653}
+.p b{position:absolute;left:8px;bottom:6px;font-size:10px;font-weight:500;color:#D8D6CE}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:10px;border-left:1.5px solid #F0EFEA}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;background:#EFEEE9}
+.ri.pri{background:#F5A653}
+.ri.end{background:#1F1F1C}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.pri i{border-color:#2B1A08}
+.ri.end i{border-color:#F2F1EC}
+.ri i.c{border-radius:999px}
+.rail.s{width:34px}
+.rail.s .ri{width:26px;height:26px;border-radius:8px}
+.rail.s .ri i{width:11px;height:11px}
+.gap{flex:1}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+.lab{font-size:16px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 22</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">视频会议 · 一面看内容一面看人</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">内屏变成小会议室：共享屏幕和参会者同时可见</p>
+  <div class="ref"><b>参考</b>Zoom · FaceTime · 来自 Apple 开发者案例</div>
+  <div class="lab" style="margin-top:26px">展开 · 内屏横向<span>951 × 669 pt · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="padding:24px 0 24px 24px;flex-direction:row">
+      <div style="width:452px;flex:none;box-sizing:border-box;padding-right:24px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:15px;font-weight:700;height:24px">共享屏幕 · 参会者 A</div>
+        <div class="ph" style="flex:1;align-items:stretch;justify-content:flex-start;padding:22px;gap:12px;background:#F7F6F2;border:1.5px solid #ECEBE5">
+          <div style="font-size:18px;font-weight:900;color:#1F1F1C">文档标题占位</div>
+          <div class="ln" style="width:90%"></div><div class="ln" style="width:80%"></div><div class="ln" style="width:85%"></div>
+          <div class="ph" style="height:150px;margin:6px 0">图表占位</div>
+          <div class="ln" style="width:70%"></div><div class="ln" style="width:60%"></div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:0 18px 0 28px">
+        <div style="font-size:15px;font-weight:700;height:24px">参会者 · 6</div>
+        <div style="flex:1;display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));grid-template-rows:repeat(3, minmax(0, 1fr));gap:10px">
+          <div class="p sp"><i></i><b>正在发言</b></div><div class="p"><i></i><b>参会者</b></div>
+          <div class="p"><i></i><b>参会者</b></div><div class="p"><i></i><b>参会者</b></div>
+          <div class="p"><i></i><b>参会者</b></div><div class="p" style="background:#3A3935"><i></i><b>我</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="rail" style="width:72px;padding:24px 0">
+      <div class="ri"><i class="c"></i></div><div class="ri"><i></i></div><div class="ri pri"><i></i></div>
+      <div class="gap"></div>
+      <div class="ri end"><i class="c"></i></div>
+    </div>
+    <div class="vh"></div><div class="hl" style="left:50%;top:10px;transform:translateX(-50%)">内容一面 · 人像一面</div>
+  </div>
+  <div style="margin-top:28px;display:flex;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:8px;flex:none">
+      <div class="lab">折叠<span>外屏 · 只看发言人</span></div>
+      <div class="dev" style="width:184px;height:268px;border-radius:20px">
+        <div class="main" style="padding:10px 6px 10px 10px;position:relative">
+          <div class="p sp" style="flex:1"><i></i><b>正在发言</b></div>
+          <div class="p" style="position:absolute;right:12px;bottom:14px;width:44px;height:60px;background:#3A3935;border:2px solid #FFFFFF"></div>
+        </div>
+        <div class="rail s" style="padding:10px 0"><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div><div class="gap"></div><div class="ri end"><i class="c"></i></div></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding-top:28px">
+      <div class="tip"><div class="tipn duo">1</div><div>共享内容和人像各占一面，参会者网格用偶数列</div></div>
+      <div class="tip"><div class="tipn duo">2</div><div>麦克风、摄像头、挂断进竖栏，挂断放最下面，离常用键远一点</div></div>
+      <div class="tip"><div class="tipn">3</div><div>开合时通话不中断，自动切到朝向用户的摄像头</div></div>
+      <div class="code" style="margin-top:4px">外屏可以邀请身边的人一起入镜：FaceTime 已支持在外屏加入通话</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

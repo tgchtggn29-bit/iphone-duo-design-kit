@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>01 图片 + 列表</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.ph{background:#E9E8E2;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#66655E;font-size:14px}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.on{background:#FDE3C8}
+.ri.pri{background:#F5A653}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.on i{border-color:#9A4A0C}
+.ri.pri i{border-color:#2B1A08}
+.ri i.c{border-radius:999px}
+.rail.s{width:34px}
+.rail.s .ri{width:28px;height:28px;border-radius:9px}
+.rail.s .ri i{width:12px;height:12px}
+.gap{flex:1}
+.hinge{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.item{border:1.5px solid #ECEBE5;border-radius:14px;display:flex;align-items:center;gap:12px;padding:10px 12px;background:#FFFFFF}
+.num{width:40px;height:40px;border-radius:10px;background:#EFEEE9;color:#66655E;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.num.on{background:#FDE3C8;color:#9A4A0C}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:19px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{margin-top:auto;padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{display:flex;justify-content:space-between;align-items:baseline;font-size:18px;font-weight:700}
+.lab span{font-size:14px;font-weight:400;color:#66655E}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 适配模式 01</div>
+  <h1 style="margin:12px 0 0;font-size:64px;line-height:1.15;font-weight:900">图片 + 列表</h1>
+  <p style="margin:12px 0 0;font-size:24px;color:#4F4E48">主视觉与列表同屏：展开并排，折叠上下堆叠</p>
+  <div class="lab" style="margin-top:28px">展开 · 内屏横向 <span>951 × 669 pt · Regular · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="padding:24px;gap:16px">
+      <div style="height:48px"><div style="font-size:22px;font-weight:900">附近的活动</div><div style="font-size:12px;color:#66655E">占位界面</div></div>
+      <div style="flex:1;display:flex;gap:20px;min-height:0">
+        <div class="ph" style="flex:1.85">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#8A8981" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="M4 18l5-5 4 4 3-3 4 4"></path></svg>
+          <span style="font-size:18px">图片 / 地图占位</span>
+          <span style="font-size:12px">纯展示内容，可以跨过折痕</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:15px;font-weight:700">活动列表</div>
+          <div class="item"><div class="num on">01</div><div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font-size:14px">活动占位 01</div><div class="ln" style="width:85%"></div><div class="ln" style="width:55%"></div></div></div>
+          <div class="item"><div class="num">02</div><div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font-size:14px">活动占位 02</div><div class="ln" style="width:85%"></div><div class="ln" style="width:55%"></div></div></div>
+          <div class="item"><div class="num">03</div><div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font-size:14px">活动占位 03</div><div class="ln" style="width:85%"></div><div class="ln" style="width:55%"></div></div></div>
+          <div class="item"><div class="num">04</div><div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font-size:14px">活动占位 04</div><div class="ln" style="width:85%"></div><div class="ln" style="width:55%"></div></div></div>
+          <div class="item"><div class="num">05</div><div style="flex:1;display:flex;flex-direction:column;gap:7px"><div style="font-size:14px">活动占位 05</div><div class="ln" style="width:85%"></div><div class="ln" style="width:55%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="rail" style="width:72px;padding:24px 0">
+      <div class="ri pri"><i class="c"></i></div>
+      <div class="gap"></div>
+      <div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+    </div>
+    <div class="hinge"></div><div class="hl">折痕 · 半折时生效</div>
+  </div>
+  <div style="margin-top:36px;display:flex;gap:44px">
+    <div class="dev" style="width:280px;height:408px;border-radius:28px;flex:none">
+      <div class="main" style="padding:14px 10px 14px 14px;gap:8px">
+        <div style="font-size:16px;font-weight:900">附近的活动</div>
+        <div class="ph" style="height:118px;flex:none">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A8981" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="M4 18l5-5 4 4 3-3 4 4"></path></svg>
+          <span style="font-size:11px">图片 / 地图占位</span>
+        </div>
+        <div style="font-size:12px;font-weight:700">活动列表</div>
+        <div class="item" style="padding:7px 8px;gap:8px"><div class="num on" style="width:30px;height:30px;font-size:11px">01</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px">活动占位 01</div><div class="ln" style="width:80%;height:5px"></div></div></div>
+        <div class="item" style="padding:7px 8px;gap:8px"><div class="num" style="width:30px;height:30px;font-size:11px">02</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px">活动占位 02</div><div class="ln" style="width:80%;height:5px"></div></div></div>
+        <div class="item" style="padding:7px 8px;gap:8px"><div class="num" style="width:30px;height:30px;font-size:11px">03</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px">活动占位 03</div><div class="ln" style="width:80%;height:5px"></div></div></div>
+      </div>
+      <div class="rail s" style="padding:14px 0">
+        <div class="ri pri"><i class="c"></i></div>
+        <div class="gap"></div>
+        <div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px">
+      <div class="lab">折叠 · 外屏 <span>466 × 678 pt · Compact</span></div>
+      <div class="tip"><div class="tipn">1</div><div>同一套组件，只换容器方向：横排 ↔ 竖排</div></div>
+      <div class="tip"><div class="tipn">2</div><div>折叠时图片压到约 1/3 屏高，把空间让给列表</div></div>
+      <div class="tip"><div class="tipn duo">3</div><div>Tab 栏两种形态都在右侧竖排，底部不再放导航</div></div>
+      <div class="code">
+        <div style="font-weight:700;margin-bottom:4px">SwiftUI 实现提示</div>
+        <code>AnyLayout(isWide ? HStackLayout() : VStackLayout())</code><br>isWide 读 horizontalSizeClass == .regular
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>27 开合即交互</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative;flex:none}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.vid{background:#2A2925;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#D8D6CE;font-size:11px}
+.ln{height:6px;border-radius:3px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:7px;border-left:1.5px solid #F0EFEA}
+.ri{width:22px;height:22px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.pri{background:#F5A653}
+.ri i{display:block;width:10px;height:10px;border:2px solid #66655E;border-radius:4px;box-sizing:border-box}
+.ri.pri i{border-color:#2B1A08}
+.ri i.c{border-radius:999px}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.sb{background:#FFFFFF;border:1.5px solid #DFDDD5;border-radius:24px;padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+.sbt{display:flex;align-items:baseline;gap:12px;font-size:21px;font-weight:900}
+.sbt span{font-size:14px;font-weight:400;color:#66655E}
+.flow{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.act{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}
+.act b{background:#F5A653;color:#2B1A08;border-radius:999px;padding:6px 16px;font-size:15px}
+.act span{font-size:12px;color:#66655E;text-align:center;line-height:1.4}
+.al{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:8px}
+.al i{height:66px;border-radius:8px;background:#E9E8E2}
+.al i.on{background:#F5A653}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 27</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">开合即交互</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">打开、合上本身就是一个动作：可以拿来“接着做”或“开始做”</p>
+  <div class="ref"><b>参考</b>Netflix · Deck-Man · 来自 Apple 开发者案例与 TechCrunch</div>
+  <div class="sb" style="margin-top:26px">
+    <div class="sbt">打开 = 接着看<span>折叠刷短片，打开看完整版</span></div>
+    <div class="flow">
+      <div class="dev" style="width:180px;height:262px;border-radius:20px">
+        <div class="main" style="padding:10px 6px 10px 10px;gap:7px"><div class="vid" style="flex:1"><span>竖版片段</span><span style="font-size:18px">▶</span></div><div class="ln" style="width:70%"></div></div>
+        <div class="rail" style="width:30px;padding:10px 0"><div class="ri pri"><i class="c"></i></div><div class="ri"><i></i></div></div>
+      </div>
+      <div class="act"><svg width="70" height="24" viewBox="0 0 70 24" fill="none" stroke="#9A4A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h62M56 4l8 8-8 8"></path></svg><b>打开</b><span>进度接着走<br>画面横过来</span></div>
+      <div class="dev" style="width:420px;height:295px;border-radius:24px">
+        <div class="main" style="padding:12px;gap:8px"><div class="vid" style="flex:1;font-size:13px"><span>完整剧集 · 从刚才的位置继续</span></div><div style="height:5px;border-radius:3px;background:#E9E8E2;position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:36%;background:#F5A653;border-radius:3px"></div></div></div>
+        <div class="vh"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb" style="margin-top:16px">
+    <div class="sbt">合上 = 开始播<span>打开挑专辑，合上就开始听</span></div>
+    <div class="flow">
+      <div class="dev" style="width:420px;height:295px;border-radius:24px">
+        <div class="main" style="padding:14px;flex-direction:row;gap:26px">
+          <div style="flex:1;display:flex;flex-direction:column;gap:8px"><div style="font-size:12px;font-weight:700">选一张专辑</div><div class="al"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center"><div style="width:150px;height:96px;border-radius:12px;background:#2A2925;display:flex;align-items:center;justify-content:center;gap:26px"><span style="width:30px;height:30px;border-radius:999px;border:4px solid #F5A653;box-sizing:border-box"></span><span style="width:30px;height:30px;border-radius:999px;border:4px solid #F5A653;box-sizing:border-box"></span></div></div>
+        </div>
+        <div class="vh"></div>
+      </div>
+      <div class="act"><svg width="70" height="24" viewBox="0 0 70 24" fill="none" stroke="#9A4A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h62M56 4l8 8-8 8"></path></svg><b>合上</b><span>像把磁带<br>推进随身听</span></div>
+      <div class="dev" style="width:180px;height:262px;border-radius:20px">
+        <div class="main" style="padding:12px 6px 12px 12px;gap:10px;align-items:center"><div style="width:110px;height:110px;border-radius:14px;background:#F5A653"></div><div class="ln" style="width:80%"></div><div style="display:flex;gap:10px;margin-top:6px"><span style="width:26px;height:26px;border-radius:999px;background:#EFEEE9"></span><span style="width:26px;height:26px;border-radius:999px;background:#1F1F1C"></span><span style="width:26px;height:26px;border-radius:999px;background:#EFEEE9"></span></div></div>
+        <div class="rail" style="width:30px;padding:12px 0"><div class="ri pri"><i class="c"></i></div></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:16px;padding:16px 20px;border-radius:18px;background:#1F1F1C;color:#F2F1EC;font-size:16px;line-height:1.6">
+    <b style="color:#F5A653">设计师观察（X）：</b>外屏和内屏竖着放时宽高比很接近，所以打开时内容更像“被放大”而不是“被重排”，过渡才显得顺
+  </div>
+  <div style="margin-top:20px;display:flex;gap:24px">
+    <div style="flex:1.2;display:flex;flex-direction:column;gap:12px">
+      <div class="tip"><div class="tipn duo">1</div><div>状态必须连续：进度、选中、草稿一个都不能丢</div></div>
+      <div class="tip"><div class="tipn">2</div><div>开合只是捷径，两种形态下都要能用按钮完成同一件事</div></div>
+    </div>
+    <div class="code" style="flex:1">
+      <div style="font-weight:700;margin-bottom:4px">实现提示</div>
+      监听容器尺寸变化 <code>onGeometryChange</code>，别去猜设备事件
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

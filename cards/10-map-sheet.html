@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>10 地图 + 抽屉</title>
+<!-- 10-map-sheet · iPhone Duo Design Kit · CC BY 4.0 · github.com/tgchtggn29-bit/iphone-duo-design-kit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Noto Sans SC';font-weight:400;src:local('Noto Sans SC'),local('Noto Sans CJK SC'),local('NotoSansCJKsc-Regular'),local('Source Han Sans SC');}
+@font-face{font-family:'Noto Sans SC';font-weight:500;src:local('Noto Sans SC'),local('Noto Sans CJK SC Medium'),local('NotoSansCJKsc-Medium'),local('Source Han Sans SC Medium');}
+@font-face{font-family:'Noto Sans SC';font-weight:700;src:local('Noto Sans SC'),local('Noto Sans CJK SC Bold'),local('NotoSansCJKsc-Bold'),local('Source Han Sans SC Bold');}
+@font-face{font-family:'Noto Sans SC';font-weight:900;src:local('Noto Sans SC'),local('Noto Sans CJK SC Black'),local('NotoSansCJKsc-Black'),local('Source Han Sans SC Black');}
+</style>
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.map{background:#E9E8E2;position:relative;overflow:hidden}
+.rd{position:absolute;background:#F7F6F1}
+.pin{position:absolute;width:16px;height:16px;border-radius:999px;background:#FFFFFF;border:4px solid #8A8981}
+.pin.on{border-color:#E08A2E;width:22px;height:22px}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA;background:#FFFFFF}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.on{background:#FDE3C8}
+.ri.pri{background:#F5A653}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.on i{border-color:#9A4A0C}
+.ri.pri i{border-color:#2B1A08}
+.ri i.c{border-radius:999px}
+.rail.s{width:34px}
+.rail.s .ri{width:28px;height:28px;border-radius:9px}
+.rail.s .ri i{width:12px;height:12px}
+.gap{flex:1}
+.hinge{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.panel{position:absolute;background:#FFFFFF;border-radius:18px;box-shadow:0 8px 28px rgba(31,31,28,0.14);display:flex;flex-direction:column;gap:10px}
+.srch{height:38px;border-radius:999px;background:#F2F1EC;display:flex;align-items:center;padding:0 14px;font-size:13px;color:#66655E;flex:none}
+.item{display:flex;gap:10px;align-items:center;padding:8px;border-radius:12px}
+.item.on{background:#FDE3C8}
+.num{width:34px;height:34px;border-radius:9px;background:#EFEEE9;color:#66655E;display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+.item.on .num{background:#F5C08A;color:#5A2C06}
+.grab{width:40px;height:5px;border-radius:3px;background:#D6D4CC;align-self:center;flex:none}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:19px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{margin-top:auto;padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{display:flex;justify-content:space-between;align-items:baseline;font-size:18px;font-weight:700}
+.lab span{font-size:14px;font-weight:400;color:#66655E}
+</style>
+</head>
+<body style="margin:0">
+<div style="position:relative;width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 适配模式 10 · MAP + SHEET</div>
+  <h1 style="margin:12px 0 0;font-size:64px;line-height:1.15;font-weight:900">地图 + 抽屉</h1>
+  <p style="margin:12px 0 0;font-size:24px;color:#4F4E48">外卖、出行、找店：地图铺满，面板只换位置</p>
+  <div class="lab" style="margin-top:28px">展开 · 内屏横向 <span>951 × 669 pt · Regular · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main map">
+      <div class="rd" style="left:0;right:0;top:38%;height:14px"></div>
+      <div class="rd" style="top:0;bottom:0;left:66%;width:14px"></div>
+      <div class="rd" style="top:0;bottom:0;left:48%;width:8px"></div>
+      <div class="rd" style="left:30%;right:0;top:72%;height:8px"></div>
+      <div class="pin on" style="left:72%;top:30%"></div>
+      <div class="pin" style="left:58%;top:56%"></div>
+      <div class="pin" style="left:84%;top:62%"></div>
+      <div class="pin" style="left:78%;top:16%"></div>
+      <div class="panel" style="left:24px;top:24px;bottom:24px;width:320px;padding:16px">
+        <div style="font-size:20px;font-weight:900">附近门店</div>
+        <div class="srch">搜索地点…</div>
+        <div class="item on"><div class="num">01</div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px;font-weight:700">门店占位 01</div><div class="ln" style="width:70%;background:#F6CFA6"></div></div></div>
+        <div class="item"><div class="num">02</div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">门店占位 02</div><div class="ln" style="width:60%"></div></div></div>
+        <div class="item"><div class="num">03</div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">门店占位 03</div><div class="ln" style="width:75%"></div></div></div>
+        <div class="item"><div class="num">04</div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">门店占位 04</div><div class="ln" style="width:55%"></div></div></div>
+        <div class="item"><div class="num">05</div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="font-size:13px">门店占位 05</div><div class="ln" style="width:65%"></div></div></div>
+      </div>
+    </div>
+    <div class="rail" style="width:72px;padding:24px 0">
+      <div class="ri pri"><i class="c"></i></div><div class="ri"><i></i></div>
+      <div class="gap"></div>
+      <div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+    </div>
+    <div class="hinge"></div><div class="hl">面板整块落在左半屏</div>
+  </div>
+  <div style="margin-top:36px;display:flex;gap:44px">
+    <div class="dev" style="width:280px;height:408px;border-radius:28px;flex:none">
+      <div class="main map">
+        <div class="rd" style="left:0;right:0;top:24%;height:10px"></div>
+        <div class="rd" style="top:0;bottom:0;left:58%;width:10px"></div>
+        <div class="pin on" style="left:62%;top:12%;width:16px;height:16px;border-width:3px"></div>
+        <div class="pin" style="left:28%;top:30%;width:12px;height:12px;border-width:3px"></div>
+        <div class="panel" style="left:0;right:0;bottom:0;height:64%;border-radius:18px 18px 0 0;padding:8px 10px 12px 12px;gap:6px">
+          <div class="grab"></div>
+          <div class="srch" style="height:30px;font-size:11px">搜索地点…</div>
+          <div class="item on" style="padding:6px"><div class="num" style="width:28px;height:28px;font-size:10px">01</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px;font-weight:700">门店占位 01</div><div class="ln" style="width:70%;height:5px;background:#F6CFA6"></div></div></div>
+          <div class="item" style="padding:6px"><div class="num" style="width:28px;height:28px;font-size:10px">02</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px">门店占位 02</div><div class="ln" style="width:60%;height:5px"></div></div></div>
+          <div class="item" style="padding:6px"><div class="num" style="width:28px;height:28px;font-size:10px">03</div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font-size:11px">门店占位 03</div><div class="ln" style="width:75%;height:5px"></div></div></div>
+        </div>
+      </div>
+      <div class="rail s" style="padding:14px 0">
+        <div class="ri pri"><i class="c"></i></div><div class="ri"><i></i></div>
+        <div class="gap"></div>
+        <div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px">
+      <div class="lab">折叠 · 外屏 <span>466 × 678 pt · Compact</span></div>
+      <div class="tip"><div class="tipn">1</div><div>同一个面板：宽屏浮在左侧，窄屏变底部抽屉（收起 · 半屏 · 全屏）</div></div>
+      <div class="tip"><div class="tipn">2</div><div>选中门店时地图自动平移，避开面板遮挡区</div></div>
+      <div class="tip"><div class="tipn duo">3</div><div>地图铺满到边缘，定位、图层按钮进右侧竖栏，不压在地图上</div></div>
+      <div class="code">
+        <div style="font-weight:700;margin-bottom:4px">SwiftUI 实现提示</div>
+        <code>.presentationDetents([.height(120), .medium, .large])</code><br>内屏改用侧边面板，半折时系统会把弹层挪离折痕
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:26px;right:64px;font:500 14px/1 'Noto Sans SC',sans-serif;color:#8A8781;letter-spacing:0.02em">github.com/tgchtggn29-bit/iphone-duo-design-kit</div>
+</div>
+</body>
+</html>

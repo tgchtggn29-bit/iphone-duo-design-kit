@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>24 视频剪辑时间线</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.vid{background:#2A2925;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#D8D6CE;font-size:13px}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.ri.on{background:#FDE3C8}
+.ri.pri{background:#F5A653}
+.ri i{display:block;width:16px;height:16px;border:2px solid #66655E;border-radius:5px;box-sizing:border-box}
+.ri.on i{border-color:#9A4A0C}
+.ri.pri i{border-color:#2B1A08}
+.ri i.c{border-radius:999px}
+.rail.s{width:34px}
+.rail.s .ri{width:26px;height:26px;border-radius:8px}
+.rail.s .ri i{width:11px;height:11px}
+.sep{width:22px;height:1.5px;background:#E2E0D8;margin:2px 0;flex:none}
+.gap{flex:1}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.tl{background:#F7F6F2;border-radius:14px;position:relative;padding:12px 0 12px 12px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.trk{display:flex;gap:4px;height:38px}
+.cl{border-radius:8px;flex:none}
+.c1{background:#F6CFA6}
+.c2{background:#E2E0D8}
+.c3{background:#CFE0DC}
+.ph{position:absolute;top:4px;bottom:4px;width:3px;background:#1F1F1C;border-radius:2px}
+.ph::before{content:'';position:absolute;top:-4px;left:-5px;width:13px;height:13px;border-radius:999px;background:#1F1F1C}
+.sl{display:flex;flex-direction:column;gap:7px}
+.slt{display:flex;justify-content:space-between;font-size:13px}
+.slt span:last-child{color:#66655E}
+.bar{height:6px;border-radius:3px;background:#E9E8E2;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#F5A653}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{font-size:16px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</helmet>
+<div style="width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 24</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">视频剪辑 · 时间线横跨</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">手机上的剪辑台：预览和参数分两面，时间线铺满底部</p>
+  <div class="ref"><b>参考</b>Instagram Edits · VLLO · 来自 Apple 开发者案例</div>
+  <div class="lab" style="margin-top:26px">展开 · 内屏横向<span>951 × 669 pt · 虚线为折痕</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="padding:22px 0 22px 22px;gap:16px">
+      <div style="height:330px;display:flex">
+        <div style="width:454px;flex:none;box-sizing:border-box;padding-right:24px;display:flex"><div class="vid" style="flex:1">预览 · 16 : 9</div></div>
+        <div style="flex:1;padding:4px 20px 0 26px;display:flex;flex-direction:column;gap:18px">
+          <div style="font-size:15px;font-weight:700">片段属性</div>
+          <div class="sl"><div class="slt"><span>速度</span><span>1.0×</span></div><div class="bar"><i style="width:40%"></i></div></div>
+          <div class="sl"><div class="slt"><span>音量</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
+          <div class="sl"><div class="slt"><span>滤镜强度</span><span>45%</span></div><div class="bar"><i style="width:45%"></i></div></div>
+          <div class="sl"><div class="slt"><span>转场时长</span><span>0.5s</span></div><div class="bar"><i style="width:25%"></i></div></div>
+        </div>
+      </div>
+      <div class="tl" style="flex:1;margin-right:18px">
+        <div style="display:flex;gap:44px;font-size:10px;color:#66655E;padding-left:2px"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span><span>00:20</span><span>00:25</span><span>00:30</span><span>00:35</span><span>00:40</span><span>00:45</span><span>00:50</span><span>00:55</span></div>
+        <div class="trk"><div class="cl c1" style="width:150px"></div><div class="cl c1" style="width:210px;box-shadow:inset 0 0 0 3px #E08A2E"></div><div class="cl c1" style="width:120px"></div><div class="cl c1" style="width:260px"></div><div class="cl c1" style="width:180px"></div></div>
+        <div class="trk" style="height:26px"><div style="width:90px"></div><div class="cl c3" style="width:180px"></div><div style="width:160px"></div><div class="cl c3" style="width:120px"></div></div>
+        <div class="trk" style="height:26px"><div class="cl c2" style="width:560px"></div><div class="cl c2" style="width:300px"></div></div>
+        <div class="ph" style="left:300px"></div>
+      </div>
+    </div>
+    <div class="rail" style="width:72px;padding:22px 0">
+      <div class="ri pri"><i class="c"></i></div><div class="sep"></div>
+      <div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div>
+    </div>
+    <div class="vh"></div><div class="hl" style="left:50%;top:10px;transform:translateX(-50%)">时间线可滚动 · 可以跨过折痕</div>
+  </div>
+  <div style="margin-top:28px;display:flex;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:8px;flex:none">
+      <div class="lab">折叠<span>上预览 · 下时间线</span></div>
+      <div class="dev" style="width:184px;height:268px;border-radius:20px">
+        <div class="main" style="padding:10px 6px 10px 10px;gap:8px">
+          <div class="vid" style="height:84px;flex:none;font-size:10px">预览</div>
+          <div class="tl" style="flex:1;padding:8px 0 8px 8px;gap:5px;border-radius:10px">
+            <div class="trk" style="height:24px;gap:3px"><div class="cl c1" style="width:50px"></div><div class="cl c1" style="width:70px;box-shadow:inset 0 0 0 2px #E08A2E"></div><div class="cl c1" style="width:60px"></div></div>
+            <div class="trk" style="height:14px;gap:3px"><div class="cl c2" style="width:150px"></div></div>
+            <div class="ph" style="left:70px"></div>
+          </div>
+        </div>
+        <div class="rail s" style="padding:10px 0"><div class="ri pri"><i class="c"></i></div><div class="ri on"><i></i></div><div class="ri"><i class="c"></i></div><div class="ri"><i></i></div></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding-top:28px">
+      <div class="tip"><div class="tipn duo">1</div><div>时间线是滚动内容，可以横跨折痕；拖动手柄别停在中线上</div></div>
+      <div class="tip"><div class="tipn duo">2</div><div>预览一面、参数一面，改参数时画面不被挡</div></div>
+      <div class="tip"><div class="tipn">3</div><div>剪切、文字、音频等工具进竖栏；导出放最上</div></div>
+      <div class="code" style="margin-top:4px">参数面板用 <code>.inspector</code>：宽屏常驻右侧，窄屏变弹层</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1440}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

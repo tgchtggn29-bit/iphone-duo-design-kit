@@ -1,0 +1,23 @@
+name: Correction · 纠错
+description: A size, rule or API on a card is wrong or outdated.
+labels: [correction]
+body:
+  - type: input
+    id: card
+    attributes:
+      label: Card id · 卡片编号
+      placeholder: e.g. 15-vertical-bars
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong, and what should it say? · 哪里不对，应该怎么改？
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link · 来源链接
+    validations:
+      required: true

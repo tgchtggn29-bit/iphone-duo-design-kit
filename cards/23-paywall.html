@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>23 付费墙</title>
+<!-- 23-paywall · iPhone Duo Design Kit · CC BY 4.0 · github.com/tgchtggn29-bit/iphone-duo-design-kit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Noto Sans SC';font-weight:400;src:local('Noto Sans SC'),local('Noto Sans CJK SC'),local('NotoSansCJKsc-Regular'),local('Source Han Sans SC');}
+@font-face{font-family:'Noto Sans SC';font-weight:500;src:local('Noto Sans SC'),local('Noto Sans CJK SC Medium'),local('NotoSansCJKsc-Medium'),local('Source Han Sans SC Medium');}
+@font-face{font-family:'Noto Sans SC';font-weight:700;src:local('Noto Sans SC'),local('Noto Sans CJK SC Bold'),local('NotoSansCJKsc-Bold'),local('Source Han Sans SC Bold');}
+@font-face{font-family:'Noto Sans SC';font-weight:900;src:local('Noto Sans SC'),local('Noto Sans CJK SC Black'),local('NotoSansCJKsc-Black'),local('Source Han Sans SC Black');}
+</style>
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.ln{height:7px;border-radius:4px;background:#E9E8E2;flex:none}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;border-left:1.5px solid #F0EFEA;background:#FFFFFF}
+.ri{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;background:#EFEEE9;position:relative}
+.ri .x{position:relative;width:16px;height:16px}
+.ri .x::before,.ri .x::after{content:'';position:absolute;left:7px;top:0;width:2px;height:16px;background:#4F4E48;transform:rotate(45deg)}
+.ri .x::after{transform:rotate(-45deg)}
+.rail.s{width:34px}
+.rail.s .ri{width:26px;height:26px;border-radius:8px}
+.rail.s .ri .x{width:11px;height:11px}
+.rail.s .ri .x::before,.rail.s .ri .x::after{left:5px;height:11px}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.hl{position:absolute;background:#FFF4E8;color:#9A4A0C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid #F3C99B}
+.plan{flex:1;border-radius:16px;border:2px solid #E2E0D8;padding:14px;display:flex;flex-direction:column;gap:6px;background:#FFFFFF}
+.plan.on{border-color:#F5A653;background:#FFF8F0}
+.plan b{font-size:15px}
+.plan span{font-size:20px;font-weight:900}
+.cta{height:52px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ben{display:flex;align-items:center;gap:10px;font-size:14px}
+.ben i{width:18px;height:18px;border-radius:999px;background:#F5A653;flex:none}
+.dim{position:absolute;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#9A4A0C}
+.dim .l{flex:1;height:0;border-top:1.5px solid #9A4A0C}
+.dim .e{width:1.5px;height:10px;background:#9A4A0C}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#DDDBD2;border-radius:6px;padding:2px 6px;color:#1F1F1C}
+.lab{font-size:16px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</head>
+<body style="margin:0">
+<div style="position:relative;width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 23 · PAYWALL · CAPPED WIDTH</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">付费墙 · 限宽居中</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">屏幕变宽了，内容别跟着拉满：背景铺满，内容和按钮限宽</p>
+  <div class="ref"><b>参考</b>RevenueCat 官方 Duo 适配指南</div>
+  <div class="lab" style="margin-top:26px">展开 · 内屏横向<span>背景全宽 · 内容 ≤ 600pt · 按钮 ≤ 400pt</span></div>
+  <div class="dev" style="margin-top:10px;width:952px;height:670px;border-radius:36px">
+    <div class="main" style="background:#FFF4E8;align-items:center;justify-content:center;padding:30px 0;position:relative">
+      <div style="width:600px;display:flex;flex-direction:column;gap:14px;align-items:stretch">
+        <div style="display:flex;gap:16px;align-items:center"><div style="width:64px;height:64px;border-radius:18px;background:#F5A653"></div><div><div style="font-size:24px;font-weight:900">解锁全部功能</div><div style="font-size:13px;color:#66655E">[产品名] 会员</div></div></div>
+        <div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:10px 24px;margin:6px 0"><div class="ben"><i></i>权益占位 A</div><div class="ben"><i></i>权益占位 B</div><div class="ben"><i></i>权益占位 C</div><div class="ben"><i></i>权益占位 D</div></div>
+        <div style="display:flex;gap:12px"><div class="plan"><b>月付</b><span>[价格]</span></div><div class="plan on"><b>年付</b><span>[价格]</span></div></div>
+        <div style="display:flex;justify-content:center;margin-top:8px"><div class="cta" style="width:400px">继续</div></div>
+        <div style="text-align:center;font-size:12px;color:#66655E">恢复购买 · 条款 · 隐私</div>
+      </div>
+      <div class="dim" style="left:140px;width:600px;top:136px"><span class="e"></span><span class="l"></span>600pt<span class="l"></span><span class="e"></span></div>
+      <div class="dim" style="left:240px;width:400px;bottom:160px"><span class="e"></span><span class="l"></span>400pt<span class="l"></span><span class="e"></span></div>
+    </div>
+    <div class="rail" style="width:72px;padding:24px 0"><div class="ri"><span class="x"></span></div></div>
+    <div class="vh"></div><div class="hl" style="left:50%;bottom:16px;transform:translateX(-50%)">⚠ 半折时居中按钮会压在折痕上</div>
+  </div>
+  <div style="margin-top:28px;display:flex;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:8px;flex:none">
+      <div class="lab">折叠<span>底部区压缩</span></div>
+      <div class="dev" style="width:184px;height:268px;border-radius:20px">
+        <div class="main" style="background:#FFF4E8">
+          <div style="padding:12px;display:flex;flex-direction:column;gap:8px;flex:1">
+            <div style="width:34px;height:34px;border-radius:10px;background:#F5A653"></div>
+            <div style="font-size:13px;font-weight:900">解锁全部功能</div>
+            <div class="ln" style="width:80%"></div><div class="ln" style="width:60%"></div>
+          </div>
+          <div style="background:#FFFFFF;padding:8px;display:flex;flex-direction:column;gap:6px;border-top:1.5px solid #F0EFEA">
+            <div style="display:flex;gap:5px"><div class="plan" style="padding:5px;border-radius:8px"></div><div class="plan on" style="padding:5px;border-radius:8px"></div></div>
+            <div class="cta" style="height:28px;font-size:11px">继续</div>
+          </div>
+        </div>
+        <div class="rail s" style="padding:10px 0"><div class="ri"><span class="x"></span></div></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding-top:28px">
+      <div class="tip"><div class="tipn duo">1</div><div>关闭按钮交给系统导航，它会自动进竖栏；自己画的不会跟着走</div></div>
+      <div class="tip"><div class="tipn">2</div><div>外屏：底部固定区压紧，权益说明太多就拆成两步</div></div>
+      <div class="tip"><div class="tipn duo">3</div><div>书本姿态下，可把套餐和按钮整体挪到右半面</div></div>
+      <div class="code" style="margin-top:4px"><code>.frame(maxWidth: 600)</code> 包内容，<code>.frame(maxWidth: 400)</code> 包按钮</div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:26px;right:64px;font:500 14px/1 'Noto Sans SC',sans-serif;color:#8A8781;letter-spacing:0.02em">github.com/tgchtggn29-bit/iphone-duo-design-kit</div>
+</div>
+</body>
+</html>

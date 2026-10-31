@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>21 双屏拍照</title>
+<!-- 21-dual-camera · iPhone Duo Design Kit · CC BY 4.0 · github.com/tgchtggn29-bit/iphone-duo-design-kit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Noto Sans SC';font-weight:400;src:local('Noto Sans SC'),local('Noto Sans CJK SC'),local('NotoSansCJKsc-Regular'),local('Source Han Sans SC');}
+@font-face{font-family:'Noto Sans SC';font-weight:500;src:local('Noto Sans SC'),local('Noto Sans CJK SC Medium'),local('NotoSansCJKsc-Medium'),local('Source Han Sans SC Medium');}
+@font-face{font-family:'Noto Sans SC';font-weight:700;src:local('Noto Sans SC'),local('Noto Sans CJK SC Bold'),local('NotoSansCJKsc-Bold'),local('Source Han Sans SC Bold');}
+@font-face{font-family:'Noto Sans SC';font-weight:900;src:local('Noto Sans SC'),local('Noto Sans CJK SC Black'),local('NotoSansCJKsc-Black'),local('Source Han Sans SC Black');}
+</style>
+<style>
+body{margin:0}
+a{color:#9A4A0C}a:hover{color:#6E3507}
+.dev{background:#FFFFFF;border:1.5px solid #DCDAD2;box-sizing:border-box;overflow:hidden;display:flex;position:relative}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.vf{background:#2A2925;border-radius:14px;position:relative;display:flex;align-items:center;justify-content:center;color:#D8D6CE;font-size:13px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff22 1px,transparent 1px),linear-gradient(90deg,#ffffff22 1px,transparent 1px);background-size:33.33% 33.33%;border-radius:14px}
+.rail{flex:none;display:flex;flex-direction:column;align-items:center;gap:12px;border-left:1.5px solid #F0EFEA}
+.shut{width:60px;height:60px;border-radius:999px;border:4px solid #1F1F1C;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.shut i{width:44px;height:44px;border-radius:999px;background:#F5A653}
+.sm{width:36px;height:36px;border-radius:12px;background:#EFEEE9}
+.mode{display:flex;gap:16px;justify-content:center;font-size:12px;color:#66655E}
+.mode b{color:#9A4A0C}
+.lab{font-size:17px;font-weight:700}
+.lab span{font-size:13px;font-weight:400;color:#66655E;margin-left:6px}
+.vh{position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed #E9A866}
+.tile{flex:1;background:#FFFFFF;border:1.5px solid #DFDDD5;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.tile b{font-size:17px}
+.tile span{font-size:14px;color:#4F4E48;line-height:1.5}
+.tip{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.55}
+.tipn{flex:none;width:28px;height:28px;border-radius:999px;background:#1F1F1C;color:#F2F1EC;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tipn.duo{background:#E08A2E;color:#1F1F1C}
+.code{padding:14px 18px;border-radius:16px;background:#E9E7DF;font-size:15px;line-height:1.65}
+.ref{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;margin-top:16px;padding:7px 16px;border-radius:999px;background:#FFFFFF;border:1.5px solid #DFDDD5;font-size:15px;color:#4F4E48}
+.ref b{color:#9A4A0C}
+</style>
+</head>
+<body style="margin:0">
+<div style="position:relative;width:1080px;height:1440px;box-sizing:border-box;padding:56px 64px 0;background:#F2F1EC;font-family:'Noto Sans SC',sans-serif;color:#1F1F1C;display:flex;flex-direction:column">
+  <div style="font-size:18px;letter-spacing:0.08em;color:#66655E">iPHONE DUO / 场景案例 21 · DUAL DISPLAY · CAMERA PREVIEW</div>
+  <h1 style="margin:12px 0 0;font-size:60px;line-height:1.15;font-weight:900">双屏同显 · 拍照预览</h1>
+  <p style="margin:10px 0 0;font-size:23px;color:#4F4E48">打开的手机有两面屏：里面给拍的人用，外面给被拍的人看</p>
+  <div class="ref"><b>参考</b>系统相机 Duo Preview · 来自 Apple 发布会</div>
+  <div style="margin-top:30px;display:flex;align-items:flex-end;gap:22px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="lab">内屏<span>拍摄者看 · 全部控制</span></div>
+      <div class="dev" style="width:560px;height:394px;border-radius:30px">
+        <div class="main" style="padding:16px;gap:10px">
+          <div class="vf" style="flex:1"><div class="grid"></div><span style="position:relative">后置主摄取景</span></div>
+          <div class="mode"><span>延时</span><span>视频</span><b>照片</b><span>人像</span><span>全景</span></div>
+        </div>
+        <div class="rail" style="width:86px;padding:18px 0;justify-content:center"><div class="sm"></div><div class="shut"><i></i></div><div class="sm"></div></div>
+        <div class="vh"></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-bottom:160px">
+      <svg width="46" height="24" viewBox="0 0 46 24" fill="none" stroke="#9A4A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h40M34 4l8 8-8 8"></path></svg>
+      <span style="font-size:12px;color:#9A4A0C;font-weight:700">实时同步</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="lab">外屏<span>被拍者看</span></div>
+      <div class="dev" style="width:230px;height:335px;border-radius:24px">
+        <div class="main" style="padding:12px;gap:10px">
+          <div class="vf" style="flex:1"><span style="position:absolute;top:12px;left:0;right:0;text-align:center">镜像预览</span>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:999px;background:#F5A653;color:#2B1A08;font-size:48px;font-weight:900;display:flex;align-items:center;justify-content:center">3</div>
+          </div>
+          <div style="text-align:center;font-size:13px;font-weight:700">看这里 ↑ 倒计时</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:30px;font-size:18px;font-weight:900">同一思路的其他玩法</div>
+  <div style="margin-top:12px;display:flex;gap:14px">
+    <div class="tile"><b>多人通话</b><span>FaceTime 中打开手机，身边的人在外屏加入通话</span></div>
+    <div class="tile"><b>给孩子拍照</b><span>外屏播放小动画，吸引孩子看镜头</span></div>
+    <div class="tile"><b>当面收款 / 展示</b><span>店员看内屏操作，顾客在外屏确认金额</span></div>
+  </div>
+  <div style="margin-top:26px;display:flex;gap:24px">
+    <div style="flex:1.2;display:flex;flex-direction:column;gap:12px">
+      <div class="tip"><div class="tipn duo">1</div><div>外屏只“展示”：预览、倒计时、提示，不放可点的按钮</div></div>
+      <div class="tip"><div class="tipn duo">2</div><div>所有控制都在内屏，两块屏读同一份状态</div></div>
+      <div class="tip"><div class="tipn">3</div><div>不要写死前后摄像头，开合后朝向会变</div></div>
+    </div>
+    <div class="code" style="flex:1">
+      <div style="font-weight:700;margin-bottom:4px">实现提示</div>
+      用场景附件（scene accessory）把外屏内容挂到同一个场景；摄像头朝向用系统的方向协调接口判断
+      <div style="font-size:12px;color:#66655E;margin-top:6px">iOS 27.1 新接口，以正式 SDK 为准</div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:26px;right:64px;font:500 14px/1 'Noto Sans SC',sans-serif;color:#8A8781;letter-spacing:0.02em">github.com/tgchtggn29-bit/iphone-duo-design-kit</div>
+</div>
+</body>
+</html>
