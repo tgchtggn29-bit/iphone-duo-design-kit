@@ -123,6 +123,46 @@ h2{margin:0 0 6px;font-size:clamp(26px,3.6vw,38px);font-weight:900;text-wrap:bal
 .use p{margin:0;color:var(--muted);font-size:15px}
 pre.cmd{margin:6px 0 0;background:var(--sunk);border-radius:12px;padding:12px 14px;font:500 13px/1.6 var(--mono);overflow-x:auto;white-space:pre}
 
+/* Guides (use + ai) */
+:root[data-lang="en"] .only-zh, :root:not([data-lang="en"]) .only-en{display:none!important}
+.guide{background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:24px;margin-bottom:16px;display:flex;flex-direction:column;gap:16px}
+.guide-h{display:flex;gap:16px;align-items:flex-start}
+.guide-h h3{margin:2px 0 4px;font-size:21px}
+.guide-h p{margin:0;color:var(--muted)}
+.gnum{flex:none;width:40px;height:40px;border-radius:12px;background:var(--accent);color:#2B1A08;font:900 18px/40px var(--sans);text-align:center}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{background:var(--bg);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.box h4{margin:0;font-size:16px}
+.box p{margin:0;font-size:14px;color:var(--muted)}
+.box ol{margin:0;padding-left:1.3em;font-size:14px;line-height:1.75}
+.box .pill{align-self:flex-start}
+.guide code{font:500 13px var(--mono);background:var(--sunk);padding:1px 6px;border-radius:5px}
+.tblwrap{overflow-x:auto;border:1.5px solid var(--line);border-radius:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;line-height:1.65}
+.tbl th{text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500;background:var(--bg);padding:10px 14px}
+.tbl td{padding:12px 14px;border-top:1.5px solid var(--line);vertical-align:top}
+.tbl td:first-child{white-space:nowrap}
+.tbl.api td:first-child code{background:none;padding:0}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:8px;box-shadow:0 0 0 1px var(--line)}
+.fine{margin:0;font-size:13px;color:var(--muted)}
+.cmdbox{position:relative;min-width:0}
+.cmdbox .cp{position:absolute;top:8px;right:8px}
+.cmdbox pre.cmd{margin:0;padding-right:80px;white-space:pre-wrap;word-break:break-all}
+pre.prose{white-space:pre-wrap;font-family:var(--sans);font-size:14px}
+.cp{appearance:none;border:0;background:var(--fg);color:var(--bg);font:700 12px var(--sans);padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.cp.ok{background:#2F7A4F;color:#fff}
+.urlrow{display:flex;align-items:center;gap:10px;background:var(--bg);border-radius:12px;padding:10px 12px;flex-wrap:wrap}
+.urlrow .lbl{font:700 12px var(--mono);color:var(--accent-ink)}
+.urlrow a{font:500 13px var(--mono);word-break:break-all;flex:1;min-width:0}
+.ctabs{display:flex;gap:4px;background:var(--sunk);padding:4px;border-radius:12px;align-self:flex-start}
+.ctabs button{appearance:none;border:0;background:none;font:500 13px var(--sans);color:var(--muted);padding:6px 14px;border-radius:9px;cursor:pointer}
+.ctabs button[aria-selected="true"]{background:var(--surface);color:var(--fg);font-weight:700}
+.play{background:var(--bg);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.play-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px;font-weight:700}
+.play select{font:500 14px var(--sans);padding:7px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);max-width:100%}
+.apiurl{font:500 13px var(--mono);color:var(--accent-ink);word-break:break-all}
+pre.json{max-height:320px;overflow:auto;margin:0;font-size:12px}
+@media (max-width: 760px){ .two{grid-template-columns:minmax(0,1fr)} .guide{padding:18px} }
 footer{padding-block:56px 40px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:6px}
 
 /* Lightbox */
@@ -200,6 +240,8 @@ dialog::backdrop{background:rgba(20,20,19,.62)}
     </a>
     <nav>
       <a class="pill hide-sm" href="#lab" data-i18n="navLab">折叠演示</a>
+      <a class="pill hide-sm" href="#use" data-i18n="navUse">怎么用</a>
+      <a class="pill hide-sm" href="#ai" data-i18n="navAI">给 AI 用</a>
       <a class="pill hide-sm" href="#gallery" data-i18n="navGallery">全部卡片</a>
       <button class="pill" type="button" id="lang" aria-label="Switch language">EN</button>
       <a class="pill solid" id="gh" href="https://github.com/tgchtggn29-bit/iphone-duo-design-kit">
@@ -260,6 +302,182 @@ dialog::backdrop{background:rgba(20,20,19,.62)}
     </div>
   </section>
 
+  <section id="use">
+    <h2 data-i18n="useH">怎么用</h2>
+    <p class="sec-sub" data-i18n="useSub">两种最常见的用法：直接拿图去发，或者改成你自己的版本再发。</p>
+
+    <div class="guide">
+      <div class="guide-h"><span class="gnum">A</span><div><h3 class="only-zh">直接发图</h3><h3 class="only-en">Post the images</h3>
+        <p class="only-zh">31 张卡片都是 3:4 竖版、2160 × 2880 像素，底部自带仓库地址，下载后可以直接发。</p>
+        <p class="only-en">All 31 cards are 3:4 portrait at 2160 × 2880 px with the repo credit printed at the bottom. Download and post as is.</p></div></div>
+
+      <div class="two">
+        <div class="box">
+          <h4 class="only-zh">下载一张</h4><h4 class="only-en">One card</h4>
+          <ol class="only-zh"><li>在下面的 <a href="#gallery">全部卡片</a> 里点开想要的那张</li><li>点 <b>下载 2x 原图</b>，在新页面里右键另存为</li></ol>
+          <ol class="only-en"><li>Open any card in <a href="#gallery">All cards</a> below</li><li>Click <b>Download 2x PNG</b> and save the image</li></ol>
+        </div>
+        <div class="box">
+          <h4 class="only-zh">下载全部</h4><h4 class="only-en">All cards</h4>
+          <ol class="only-zh"><li>点下面的按钮下载整个仓库压缩包，解压</li><li>打开 <code>exports/png</code> 文件夹，31 张图已经按编号命名</li></ol>
+          <ol class="only-en"><li>Download the repository zip below and unzip it</li><li>Open <code>exports/png</code>: 31 images, named by card id</li></ol>
+          <a class="pill solid" href="https://github.com/tgchtggn29-bit/iphone-duo-design-kit/archive/refs/heads/main.zip" id="dlZip"><span class="only-zh">下载全部（zip）</span><span class="only-en">Download all (zip)</span></a>
+        </div>
+      </div>
+
+      <div class="tblwrap">
+        <table class="tbl">
+          <thead><tr><th class="only-zh">平台</th><th class="only-en">Platform</th><th class="only-zh">怎么发</th><th class="only-en">How to post</th></tr></thead>
+          <tbody>
+            <tr><td><b class="only-zh">小红书</b><b class="only-en">Xiaohongshu</b></td>
+              <td class="only-zh">原图直接用，第一张放封面。一篇最多 18 张，正好拆成两篇：<b>基础篇</b> = 封面 + 00–16（18 张），<b>场景篇</b> = 场景篇封面 + 17–28（13 张），隔两三天发。</td>
+              <td class="only-en">Use the images as is, cover first. Up to 18 per post, so split into two: <b>Basics</b> = cover + 00–16 (18), <b>Scenes</b> = scenes cover + 17–28 (13).</td></tr>
+            <tr><td><b class="only-zh">公众号</b><b class="only-en">WeChat</b></td>
+              <td class="only-zh">正文插图用原图。文章封面要 2.35 : 1 的横图，可以从 <a href="assets/overview.jpg" target="_blank" rel="noopener">卡片总览图</a> 裁一块。</td>
+              <td class="only-en">Use the images inline. The article cover is 2.35 : 1; crop it from the <a href="assets/overview.jpg" target="_blank" rel="noopener">overview image</a>.</td></tr>
+            <tr><td><b>X</b></td>
+              <td class="only-zh">一条推文最多 4 张：封面 + 00 规范速查 + 17 体育直播 + 23 付费墙最有代表性；完整内容发成长文（X Articles）。</td>
+              <td class="only-en">Up to 4 images per post: the cover plus 00 spec, 17 sports and 23 paywall work best. Put the full set in an X Article.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine only-zh">卡片采用 CC BY 4.0：可以转载、改编、商用，请保留卡片底部的署名或注明出处。</p>
+      <p class="fine only-en">Cards are CC BY 4.0: share, adapt and use commercially, keeping the credit line or naming the source.</p>
+    </div>
+
+    <div class="guide">
+      <div class="guide-h"><span class="gnum">B</span><div><h3 class="only-zh">改成你自己的</h3><h3 class="only-en">Make it yours</h3>
+        <p class="only-zh">每张卡片都是一个独立的 HTML 文件，不依赖任何框架。两条路线，按你的情况选。</p>
+        <p class="only-en">Every card is one standalone HTML file with no framework. Pick a route.</p></div></div>
+
+      <div class="two">
+        <div class="box">
+          <h4 class="only-zh">路线 1：不装任何环境</h4><h4 class="only-en">Route 1: no setup</h4>
+          <ol class="only-zh">
+            <li>在画廊点开卡片 → <b>查看 HTML 源文件</b> → 右上角 <b>Download raw file</b>，或者直接下载整个仓库 zip</li>
+            <li>用记事本或 VS Code 打开，搜索要改的文字直接替换</li>
+            <li>改配色：按下面的色值表全局替换</li>
+            <li>双击文件用 Chrome 打开预览</li>
+            <li>导出高清图：按 F12 → 点手机图标 → 尺寸填 1080 × 1440、DPR 选 2 → 按 Ctrl/⌘ + Shift + P，输入 <b>Capture screenshot</b> 回车，得到 2160 × 2880 的图</li>
+          </ol>
+          <ol class="only-en">
+            <li>Open a card → <b>View HTML source</b> → <b>Download raw file</b>, or grab the repo zip</li>
+            <li>Open it in any text editor and replace the text</li>
+            <li>Recolour by replacing the values in the palette table</li>
+            <li>Open the file in Chrome to preview</li>
+            <li>Export: F12 → device toolbar → 1080 × 1440, DPR 2 → Ctrl/⌘ + Shift + P → <b>Capture screenshot</b> (2160 × 2880)</li>
+          </ol>
+        </div>
+        <div class="box">
+          <h4 class="only-zh">路线 2：一条命令批量导出</h4><h4 class="only-en">Route 2: batch export</h4>
+          <p class="only-zh">需要 Node.js 18 以上。改完任意卡片后，一次导出全部图片：</p>
+          <p class="only-en">Needs Node.js 18+. Edit any card, then export every image at once:</p>
+          <div class="cmdbox"><button class="cp" type="button" data-copy="cmdRender">复制</button><pre class="cmd" id="cmdRender">git clone https://github.com/tgchtggn29-bit/iphone-duo-design-kit.git
+cd iphone-duo-design-kit
+npm install
+npx playwright install chromium
+npm run render                # 全部 31 张
+npm run render -- 17-sports   # 只导出一张</pre></div>
+          <p class="only-zh">卡片底部换成你自己的署名：</p><p class="only-en">Put your own credit line on every card:</p>
+          <div class="cmdbox"><button class="cp" type="button" data-copy="cmdCredit">复制</button><pre class="cmd" id="cmdCredit">node scripts/build-cards.cjs source/canvas github.com/你的用户名/你的仓库
+npm run render</pre></div>
+        </div>
+      </div>
+
+      <div class="tblwrap">
+        <table class="tbl">
+          <thead><tr><th class="only-zh">色值</th><th class="only-en">Colour</th><th class="only-zh">用在哪</th><th class="only-en">Used for</th></tr></thead>
+          <tbody>
+            <tr><td><span class="sw" style="background:#F2F1EC"></span><code>#F2F1EC</code></td><td class="only-zh">卡片背景</td><td class="only-en">Card background</td></tr>
+            <tr><td><span class="sw" style="background:#F5A653"></span><code>#F5A653</code></td><td class="only-zh">主色：按钮、选中态、编号</td><td class="only-en">Accent: buttons, selection, numbers</td></tr>
+            <tr><td><span class="sw" style="background:#9A4A0C"></span><code>#9A4A0C</code></td><td class="only-zh">强调文字</td><td class="only-en">Accent text</td></tr>
+            <tr><td><span class="sw" style="background:#E9A866"></span><code>#E9A866</code></td><td class="only-zh">折痕虚线</td><td class="only-en">Hinge line</td></tr>
+            <tr><td><span class="sw" style="background:#1F1F1C"></span><code>#1F1F1C</code></td><td class="only-zh">标题和正文</td><td class="only-en">Headings and text</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine only-zh">改编后的版本请注明“基于 iPhone Duo Design Kit”。卡片里的 [价格]、[时长] 是占位，换成你自己的真实内容，别编数字。</p>
+      <p class="fine only-en">Credit "based on iPhone Duo Design Kit" in adapted versions. Placeholders like [价格] are meant to be replaced with your real content.</p>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2 data-i18n="aiH">给 AI 用</h2>
+    <p class="sec-sub" data-i18n="aiSub">在线 Skill 和只读数据接口，免注册、免密钥，任何人和任何 AI 工具都能直接调用。</p>
+
+    <div class="guide">
+      <div class="guide-h"><span class="gnum">1</span><div><h3 class="only-zh">一句话喂给任何 AI</h3><h3 class="only-en">One prompt, any AI</h3>
+        <p class="only-zh">适合能联网的 AI（Claude、ChatGPT、Kimi 等）。把这段话和你的截图或代码一起发过去：</p>
+        <p class="only-en">For any assistant that can browse. Send this with your screenshot or code:</p></div></div>
+      <div class="cmdbox"><button class="cp" type="button" data-copy="promptZh">复制</button><pre class="cmd prose" id="promptZh">请先阅读 https://tgchtggn29-bit.github.io/iphone-duo-design-kit/llms.txt 和 https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/rules.json，
+按里面的 iPhone Duo 布局模式，检查下面这个页面在外屏、内屏、书本和桌面姿态下的问题，每个问题注明对应的模式编号，并给出 SwiftUI 改法：
+
+[在这里粘贴截图或代码]</pre></div>
+    </div>
+
+    <div class="guide">
+      <div class="guide-h"><span class="gnum">2</span><div><h3 class="only-zh">安装在线 Skill</h3><h3 class="only-en">Install the online skill</h3>
+        <p class="only-zh">装进 Claude Code 等支持 Agent Skills 的工具后，它会自动在合适的时候按这套模式做适配和评审。</p>
+        <p class="only-en">Once installed in Claude Code or another Agent Skills tool, it is used automatically when you adapt or review a screen.</p></div></div>
+      <div class="urlrow"><span class="lbl">SKILL.md</span><a id="skillUrl" href="skill/SKILL.md" target="_blank" rel="noopener">https://tgchtggn29-bit.github.io/iphone-duo-design-kit/skill/SKILL.md</a><button class="cp" type="button" data-copy="skillUrl">复制</button></div>
+      <div class="ctabs" role="tablist" aria-label="Install method">
+        <button type="button" role="tab" aria-selected="true" data-tab="inCurl">curl</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="inNpx">skills CLI</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="inGit">git</button>
+      </div>
+      <div class="cmdbox" data-pane="inCurl"><button class="cp" type="button" data-copy="inCurl">复制</button><pre class="cmd" id="inCurl">D=~/.claude/skills/iphone-duo-layout-patterns
+mkdir -p $D/references
+curl -fsSL https://tgchtggn29-bit.github.io/iphone-duo-design-kit/skill/SKILL.md -o $D/SKILL.md
+curl -fsSL https://tgchtggn29-bit.github.io/iphone-duo-design-kit/skill/references/patterns.md -o $D/references/patterns.md</pre></div>
+      <div class="cmdbox" data-pane="inNpx" hidden><button class="cp" type="button" data-copy="inNpx">复制</button><pre class="cmd" id="inNpx">npx skills add tgchtggn29-bit/iphone-duo-design-kit</pre></div>
+      <div class="cmdbox" data-pane="inGit" hidden><button class="cp" type="button" data-copy="inGit">复制</button><pre class="cmd" id="inGit">git clone --depth 1 https://github.com/tgchtggn29-bit/iphone-duo-design-kit.git
+cp -r iphone-duo-design-kit/skills/iphone-duo-layout-patterns ~/.claude/skills/</pre></div>
+      <p class="fine only-zh">只想在一个项目里用：把路径里的 <code>~/.claude/skills</code> 换成项目下的 <code>.claude/skills</code>。装好后可以直接说：“按 iPhone Duo 的模式检查这个页面”“把这个列表页改成 Duo 适配”。</p>
+      <p class="fine only-en">For one project only, use <code>.claude/skills</code> inside the project. Then ask: "review this screen against the iPhone Duo patterns" or "adapt this list view for iPhone Duo".</p>
+    </div>
+
+    <div class="guide">
+      <div class="guide-h"><span class="gnum">3</span><div><h3 class="only-zh">数据接口</h3><h3 class="only-en">Data API</h3>
+        <p class="only-zh">静态 JSON，GET 请求即可，免密钥、支持跨域，可以接进你自己的网站、插件或 AI 工作流。</p>
+        <p class="only-en">Static JSON over GET. No key, CORS enabled. Use it in your own site, plugin or AI workflow.</p></div></div>
+      <div class="tblwrap">
+        <table class="tbl api">
+          <thead><tr><th class="only-zh">接口</th><th class="only-en">Endpoint</th><th class="only-zh">返回</th><th class="only-en">Returns</th></tr></thead>
+          <tbody>
+            <tr><td><code>GET /api/index.json</code></td><td class="only-zh">全部 31 项的目录：编号、中英标题、姿态、详情地址</td><td class="only-en">All 31 entries: id, titles, poses, detail URL</td></tr>
+            <tr><td><code>GET /api/patterns/{id}.json</code></td><td class="only-zh">单个模式：说明、SwiftUI 提示、预览图、2x 原图、HTML 源文件地址</td><td class="only-en">One pattern: summary, SwiftUI hint, image and source URLs</td></tr>
+            <tr><td><code>GET /api/rules.json</code></td><td class="only-zh">屏幕尺寸、尺寸类别和四条核心规则</td><td class="only-en">Device sizes, size classes and the core rules</td></tr>
+            <tr><td><code>GET /patterns.json</code></td><td class="only-zh">全部数据一个文件</td><td class="only-en">Everything in one file</td></tr>
+            <tr><td><code>GET /llms.txt</code></td><td class="only-zh">给大模型读的文字索引</td><td class="only-en">Plain-text index for LLMs</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine"><span class="only-zh">基础地址：</span><span class="only-en">Base URL: </span><code>https://tgchtggn29-bit.github.io/iphone-duo-design-kit</code></p>
+
+      <div class="play">
+        <div class="play-h">
+          <label for="apiSel" class="only-zh">试一试：选一个模式</label><label for="apiSel" class="only-en">Try it: pick a pattern</label>
+          <select id="apiSel"></select>
+          <button class="cp" type="button" data-copy="apiUrl">复制地址</button>
+        </div>
+        <code class="apiurl" id="apiUrl"></code>
+        <pre class="cmd json" id="apiOut" aria-live="polite"></pre>
+      </div>
+
+      <div class="ctabs" role="tablist" aria-label="Code sample">
+        <button type="button" role="tab" aria-selected="true" data-tab="exCurl">curl</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="exJs">JavaScript</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="exPy">Python</button>
+      </div>
+      <div class="cmdbox" data-pane="exCurl"><button class="cp" type="button" data-copy="exCurl">复制</button><pre class="cmd" id="exCurl"></pre></div>
+      <div class="cmdbox" data-pane="exJs" hidden><button class="cp" type="button" data-copy="exJs">复制</button><pre class="cmd" id="exJs"></pre></div>
+      <div class="cmdbox" data-pane="exPy" hidden><button class="cp" type="button" data-copy="exPy">复制</button><pre class="cmd" id="exPy"></pre></div>
+      <p class="fine only-zh">接口托管在 GitHub Pages 上，适合正常调用；请勿高频轮询。数据随仓库更新，引用时请注明 CC BY 4.0 出处。</p>
+      <p class="fine only-en">Hosted on GitHub Pages: fine for normal use, please don't poll heavily. Data follows the repository; credit it under CC BY 4.0.</p>
+    </div>
+  </section>
+
+
   <section id="gallery">
     <h2 data-i18n="galH">全部卡片</h2>
     <p class="sec-sub" data-i18n="galSub">3:4 竖版，适合小红书、公众号和 X。点开可以下载 2160 × 2880 原图和 HTML 源文件。</p>
@@ -267,16 +485,6 @@ dialog::backdrop{background:rgba(20,20,19,.62)}
     <div class="grid" id="grid"></div>
   </section>
 
-  <section id="use">
-    <h2 data-i18n="useH">怎么用</h2>
-    <p class="sec-sub" data-i18n="useSub">设计评审、发内容、给 AI 写代码，都可以直接拿去用。</p>
-    <div class="uses">
-      <div class="use"><h3 data-i18n="u1h">直接发图</h3><p data-i18n="u1p">exports/png 里是全部 2x 原图，按编号排好，可以直接发小红书、公众号或 X。</p></div>
-      <div class="use"><h3 data-i18n="u2h">改成你自己的</h3><p data-i18n="u2p">cards/ 下每张卡片都是独立 HTML，改文字和颜色后重新导出：</p><pre class="cmd">npm install
-npm run render</pre></div>
-      <div class="use"><h3 data-i18n="u3h">给 AI 用</h3><p data-i18n="u3p">data/patterns.json 是结构化的模式库，skills/ 里有可安装的 Agent Skill，让 AI 按这些模式做适配。</p></div>
-    </div>
-  </section>
 
   <footer>
     <span data-i18n="foot1">卡片内容采用 CC BY 4.0，代码采用 MIT。与 Apple 无关，界面均为示意占位。</span>
@@ -320,7 +528,7 @@ const T = {
     poseLabel:"Pose", patternLabel:"Pattern", rulesH:"Four core rules", rulesSub:"Learn these first, then browse the patterns.",
     d1:"Outer 466 × 678 pt · compact", d2:"Inner portrait 669 × 951 pt", d3:"Inner landscape 951 × 669 pt · regular", d4:"Screenshots: outer 1398 × 2034 · inner 2007 × 2853 px",
     galH:"All cards", galSub:"3:4 portrait cards. Open one to download the 2160 × 2880 image and its HTML source.",
-    useH:"Use it", useSub:"For design reviews, posts, or as context for coding agents.",
+    useH:"Use it", useSub:"The two most common ways: post the images as they are, or make your own version first.", aiH:"For AI", aiSub:"An online skill and a read-only data API. No sign-up, no key: any person or AI tool can call them.", navUse:"Use it", navAI:"For AI",
     u1h:"Post the images", u1p:"exports/png holds every card at 2x, numbered in order.",
     u2h:"Make it yours", u2p:"Every card in cards/ is a standalone HTML file. Edit text or colours, then re-export:",
     u3h:"Give it to an agent", u3p:"data/patterns.json is a structured pattern library, and skills/ holds an installable Agent Skill.",
@@ -334,6 +542,8 @@ try { const s = localStorage.getItem("duo-lang"); if (s === "en" || s === "zh") 
 document.querySelectorAll("[data-i18n]").forEach(el => { T.zh[el.dataset.i18n] = el.textContent; });
 function applyLang(){
   document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+  document.documentElement.dataset.lang = lang;
+  document.querySelectorAll(".cp").forEach(b => { if (!b.classList.contains("ok")) b.textContent = b.dataset.copy === "apiUrl" ? (lang === "en" ? "Copy URL" : "复制地址") : (lang === "en" ? "Copy" : "复制"); });
   document.querySelectorAll("[data-i18n]").forEach(el => { const v = T[lang][el.dataset.i18n]; if (!v) return;
     if (v.includes("|")) el.innerHTML = v.split("|").map(x => `<span style="display:inline-block">${escapeHTML(x)}</span>`).join(" "); else el.textContent = v; });
   document.getElementById("lang").textContent = lang === "en" ? "中文" : "EN";
@@ -550,11 +760,44 @@ document.getElementById("lang").addEventListener("click", () => {
   lang = lang === "en" ? "zh" : "en";
   try { localStorage.setItem("duo-lang", lang); } catch (e) {}
   applyLang(); buildControls(); layout(false);
-  if (DATA) { renderRules(); renderFilters(); renderGrid(); }
+  if (DATA) { renderRules(); renderFilters(); renderGrid(); fillApiSel(); }
 });
 
+/* ---------- Use + AI sections ---------- */
+const SITE = "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/";
+function copyText(text, btn, el){
+  const done = () => { btn.textContent = lang === "en" ? "Copied" : "已复制"; btn.classList.add("ok"); setTimeout(() => { btn.classList.remove("ok"); applyLang(); }, 1600); };
+  const fb = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); let k = false; try { k = document.execCommand("copy"); } catch (x) {} if (k) { s.removeAllRanges(); done(); } else btn.textContent = lang === "en" ? "Press Ctrl/⌘+C" : "已全选，按 Ctrl/⌘+C"; };
+  try { navigator.clipboard.writeText(text).then(done, fb); } catch (x) { fb(); }
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]"); if (b) { const el = document.getElementById(b.dataset.copy); copyText(el.tagName === "A" ? el.href : el.textContent, b, el); return; }
+  const t = e.target.closest(".ctabs [data-tab]"); if (t) {
+    const bar = t.parentElement;
+    bar.querySelectorAll("[data-tab]").forEach(x => { const on = x === t; x.setAttribute("aria-selected", on); const pane = bar.parentElement.querySelector(`[data-pane="${x.dataset.tab}"]`); if (pane) pane.hidden = !on; });
+  }
+});
+document.getElementById("dlZip").addEventListener("click", () => duoTrack("zip_download"));
+const apiSel = document.getElementById("apiSel");
+function showApi(id){
+  const url = SITE + "api/patterns/" + id + ".json";
+  document.getElementById("apiUrl").textContent = url;
+  document.getElementById("exCurl").textContent = `curl -s ${url}`;
+  document.getElementById("exJs").textContent = `const res = await fetch("${url}");\nconst p = await res.json();\nconsole.log(p.title.zh, p.summary.zh, p.swiftui);`;
+  document.getElementById("exPy").textContent = `import requests\n\np = requests.get("${url}", timeout=10).json()\nprint(p["title"]["zh"], p["summary"]["zh"])`;
+  const out = document.getElementById("apiOut"); out.textContent = "…";
+  fetch("api/patterns/" + id + ".json").then(r => r.json()).then(j => { out.textContent = JSON.stringify(j, null, 2); })
+    .catch(() => { out.textContent = lang === "en" ? "Could not load. Open the URL above directly." : "加载失败，可以直接打开上面的地址查看。"; });
+}
+apiSel.addEventListener("change", () => { showApi(apiSel.value); duoTrack("api_try", { id: apiSel.value }); });
+function fillApiSel(){
+  const cur = apiSel.value || "23-paywall";
+  apiSel.innerHTML = DATA.cards.map(c => `<option value="${c.id}">${escapeHTML(c.id + " · " + L(c.title.zh, c.title.en))}</option>`).join("");
+  apiSel.value = cur; showApi(cur);
+}
+
 applyLang(); buildControls(); layout(false);
-fetch("patterns.json").then(r => r.json()).then(d => { DATA = d; renderRules(); renderFilters(); renderGrid(); })
+fetch("patterns.json").then(r => r.json()).then(d => { DATA = d; renderRules(); renderFilters(); renderGrid(); fillApiSel(); })
   .catch(() => { document.getElementById("grid").innerHTML = '<p class="empty">patterns.json could not be loaded. Serve this folder over HTTP.</p>'; });
 </script>
 </body>

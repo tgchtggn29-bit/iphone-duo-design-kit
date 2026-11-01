@@ -64,6 +64,18 @@ cp -r skills/iphone-duo-layout-patterns .claude/skills/   # or ~/.claude/skills/
 
 Then ask things like "review this screen against the iPhone Duo patterns" or "adapt this list view for iPhone Duo". `data/patterns.json` works as context for any model or tool.
 
+**Online skill and data API** (GitHub Pages, no key, CORS enabled), base URL `https://tgchtggn29-bit.github.io/iphone-duo-design-kit`:
+
+| Path | Returns |
+|---|---|
+| `/skill/SKILL.md` | The online skill; `curl` it into `~/.claude/skills/` |
+| `/api/index.json` | Index of every pattern |
+| `/api/patterns/{id}.json` | One pattern, with image and source URLs |
+| `/api/rules.json` | Device sizes and core rules |
+| `/llms.txt` | Plain-text index for LLMs |
+
+Code samples (curl, JavaScript, Python) and a live playground are in the "For AI" section of the demo site.
+
 ## All cards
 
 Click a card to open its HTML source.

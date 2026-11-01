@@ -80,6 +80,18 @@ cp -r skills/iphone-duo-layout-patterns .claude/skills/
 
 `data/patterns.json` 也可以直接喂给任何模型或工具，字段包括 `id`、`part`、`poses`、`title`、`summary`、`swiftui`、`ref`。
 
+**在线 Skill 和数据接口**（GitHub Pages 托管，免密钥、支持跨域）：
+
+| 地址 | 内容 |
+|---|---|
+| `/skill/SKILL.md` | 在线 Skill，可用 curl 直接装进 `~/.claude/skills/` |
+| `/api/index.json` | 全部模式目录 |
+| `/api/patterns/{id}.json` | 单个模式（含图片和源文件地址） |
+| `/api/rules.json` | 屏幕尺寸和核心规则 |
+| `/llms.txt` | 给大模型读的索引 |
+
+基础地址：`https://tgchtggn29-bit.github.io/iphone-duo-design-kit`。完整的调用示例（curl / JavaScript / Python）和在线试用见演示站的“给 AI 用”。
+
 ## 全部卡片
 
 点图片打开对应的 HTML 源文件。
