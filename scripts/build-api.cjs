@@ -63,7 +63,7 @@ fs.copyFileSync(path.join(root, 'data/patterns.json'), path.join(root, 'docs/pat
 // llms.txt
 const lines = [
   '# iPhone Duo Design Kit', '',
-  '> 29 layout patterns for iPhone Duo (Apple\'s foldable iPhone): outer and inner display, book and tabletop poses, vertical bars, hinge avoidance. Content CC BY 4.0.', '',
+  '> Foldable iPhone design kit: 29 layout patterns for iPhone Duo (also searched as iPhone Fold): outer and inner display, book and tabletop poses, vertical bars, hinge avoidance, SwiftUI adaptive layout. Content CC BY 4.0.', '',
   '## Machine-readable', '',
   `- [Index of all patterns](${SITE}api/index.json): ids, titles, poses, per-pattern URLs`,
   `- [Device facts and core rules](${SITE}api/rules.json)`,

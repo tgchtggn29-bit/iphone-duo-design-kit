@@ -4,6 +4,8 @@
 
 **同一份内容，两种屏幕。** 折叠屏 iPhone 的 29 个布局模式：可交互的折叠演示、可编辑的 HTML 卡片、高清图片和 SwiftUI 实现提示。
 
+*Foldable iPhone layout patterns · iPhone Fold design kit · iPhone Duo UI kit · SwiftUI adaptive layout*
+
 [**在线演示**](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/) · [English](README.en.md) · [全部卡片](#全部卡片) · [给 AI 用](#给-ai-用)
 
 ![License: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-F5A653) ![License: MIT](https://img.shields.io/badge/code-MIT-1F1F1C) ![Cards](https://img.shields.io/badge/cards-31-9A4A0C) ![No build needed](https://img.shields.io/badge/view-no%20build-6B7F5E)

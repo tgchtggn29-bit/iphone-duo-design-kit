@@ -3,10 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>iPhone Duo Design Kit</title>
-<meta name="description" content="iPhone Duo 折叠屏适配设计样板：29 个布局模式、可交互的折叠演示、可编辑的卡片源文件。Open-source layout patterns for Apple's foldable iPhone.">
+<title>iPhone Duo Design Kit · Foldable iPhone Layout Patterns</title>
+<meta name="description" content="Foldable iPhone design kit: 29 iPhone Duo layout patterns (also searched as iPhone Fold), an interactive fold lab, editable cards and SwiftUI adaptive layout hints. iPhone Duo 折叠屏适配设计样板。">
+<meta name="keywords" content="iPhone Duo, foldable iPhone, foldable iPhone layout, iPhone Fold design kit, iPhone Fold UI kit, iOS 27 foldable, SwiftUI adaptive layout, hinge-aware layout, dual screen design, 折叠屏 iPhone, 折叠屏适配">
+<link rel="canonical" href="https://tgchtggn29-bit.github.io/iphone-duo-design-kit/">
 <meta property="og:title" content="iPhone Duo Design Kit">
-<meta property="og:description" content="29 layout patterns for the foldable iPhone, an interactive fold lab and editable cards.">
+<meta property="og:description" content="Foldable iPhone layout patterns for iPhone Duo: 29 patterns, an interactive fold lab and editable cards. Free and open source.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tgchtggn29-bit.github.io/iphone-duo-design-kit/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iPhone Duo Design Kit · Foldable iPhone Layout Patterns">
+<meta name="twitter:image" content="https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/overview.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"iPhone Duo Design Kit","description":"Foldable iPhone layout patterns for iPhone Duo: interactive fold lab, editable cards, JSON pattern library and an agent skill.","codeRepository":"https://github.com/tgchtggn29-bit/iphone-duo-design-kit","license":"https://creativecommons.org/licenses/by/4.0/","keywords":"iPhone Duo, foldable iPhone layout, iPhone Fold design kit, SwiftUI adaptive layout","inLanguage":["zh-CN","en"]}</script>
+<script src="analytics.js"></script>
 <meta property="og:image" content="assets/overview.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -486,8 +495,8 @@ function buildControls(){
     `<button type="button" data-pose="${k}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p.icon}</svg>${L(p.zh, p.en)}</button>`).join("");
   document.getElementById("patterns").innerHTML = PATTERNS.map(p => `<button class="pill" type="button" data-id="${p.id}">${L(p.zh, p.en)}</button>`).join("");
 }
-document.getElementById("poses").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.pose = b.dataset.pose; layout(true); });
-document.getElementById("patterns").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.pattern = b.dataset.id; layout(true); });
+document.getElementById("poses").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.pose = b.dataset.pose; layout(true); duoTrack("pose_switch", { pose: state.pose, pattern: state.pattern }); });
+document.getElementById("patterns").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.pattern = b.dataset.id; layout(true); duoTrack("pattern_switch", { pattern: state.pattern, pose: state.pose }); });
 window.addEventListener("resize", () => layout(false));
 
 /* ---------- Rules + gallery ---------- */
@@ -527,12 +536,17 @@ function openCard(id){
   document.getElementById("lbPng").href = RAW + "exports/png/" + c.id + ".png";
   document.getElementById("lbSrc").href = BLOB + "cards/" + c.id + ".html";
   if (typeof lb.showModal === "function") lb.showModal(); else lb.setAttribute("open", "");
+  duoTrack("card_open", { id: c.id });
 }
 document.addEventListener("click", e => { const t = e.target.closest("[data-open]"); if (t) { e.preventDefault(); openCard(t.dataset.open); } });
 document.getElementById("lbClose").addEventListener("click", () => lb.close());
 lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
 
+document.getElementById("lbPng").addEventListener("click", e => duoTrack("png_download", { id: e.currentTarget.href.split("/").pop().replace(".png","") }));
+document.getElementById("lbSrc").addEventListener("click", e => duoTrack("source_view", { id: e.currentTarget.href.split("/").pop().replace(".html","") }));
+document.getElementById("gh").addEventListener("click", () => duoTrack("github_click"));
 document.getElementById("lang").addEventListener("click", () => {
+  duoTrack("lang_switch", { to: lang === "en" ? "zh" : "en" });
   lang = lang === "en" ? "zh" : "en";
   try { localStorage.setItem("duo-lang", lang); } catch (e) {}
   applyLang(); buildControls(); layout(false);

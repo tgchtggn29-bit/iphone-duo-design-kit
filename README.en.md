@@ -2,7 +2,9 @@
 
 # iPhone Duo Design Kit
 
-**One content, two screens.** 29 layout patterns for the foldable iPhone: an interactive fold lab, editable HTML cards, high-res images and SwiftUI starting points.
+**One content, two screens.** A foldable iPhone design kit: 29 iPhone Duo layout patterns with an interactive fold lab, editable HTML cards, high-res images and SwiftUI adaptive layout starting points.
+
+<sub>Keywords: foldable iPhone layout · iPhone Fold design kit · iPhone Duo UI kit · iOS 27 foldable · hinge-aware layout · SwiftUI adaptive layout</sub>
 
 [**Live demo**](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/) · [中文](README.md) · [All cards](#all-cards) · [For agents](#for-coding-agents)
 
