@@ -1,0 +1,25 @@
+{
+  "id": "16-avoid-hinge",
+  "part": "topic",
+  "title": {
+    "zh": "避开折痕",
+    "en": "Avoid the hinge"
+  },
+  "poses": [
+    "book",
+    "table"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "书本姿态弹窗移到一侧；桌面姿态上看下点；3 列网格会被劈开，改 2 列；滚动内容不需要避让。",
+    "en": "Book pose moves alerts to one side; tabletop puts viewing up top and touch below; switch three columns to two; scrolling content is exempt."
+  },
+  "swiftui": "GeometryProxy reserved regions (iOS 27.1, confirm against the SDK)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/16-avoid-hinge.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/16-avoid-hinge.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/16-avoid-hinge.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/16-avoid-hinge.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/16-avoid-hinge.html"
+  }
+}

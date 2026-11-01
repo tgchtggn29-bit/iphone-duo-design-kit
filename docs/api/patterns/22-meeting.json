@@ -1,0 +1,26 @@
+{
+  "id": "22-meeting",
+  "part": "scenes",
+  "title": {
+    "zh": "视频会议",
+    "en": "Video meeting"
+  },
+  "poses": [
+    "book",
+    "open",
+    "closed"
+  ],
+  "ref": "Zoom · FaceTime",
+  "summary": {
+    "zh": "一面看共享内容，一面看参会者；参会者网格用偶数列；挂断放竖栏最下面。",
+    "en": "Shared content on one half, participants on the other in an even grid; leave sits at the bottom of the bar."
+  },
+  "swiftui": null,
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/22-meeting.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/22-meeting.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/22-meeting.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/22-meeting.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/22-meeting.html"
+  }
+}

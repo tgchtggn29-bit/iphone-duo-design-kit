@@ -1,0 +1,26 @@
+{
+  "id": "23-paywall",
+  "part": "scenes",
+  "title": {
+    "zh": "付费墙 · 限宽居中",
+    "en": "Paywall · capped width"
+  },
+  "poses": [
+    "open",
+    "book",
+    "closed"
+  ],
+  "ref": "RevenueCat",
+  "summary": {
+    "zh": "背景铺满，内容最宽 600pt，按钮最宽 400pt；关闭交给系统导航；居中按钮半折时会压在折痕上。",
+    "en": "Full-width background, content capped at 600pt, CTA at 400pt; system close button; a centred CTA lands on the hinge when folded."
+  },
+  "swiftui": ".frame(maxWidth: 600) / .frame(maxWidth: 400)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/23-paywall.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/23-paywall.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/23-paywall.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/23-paywall.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/23-paywall.html"
+  }
+}

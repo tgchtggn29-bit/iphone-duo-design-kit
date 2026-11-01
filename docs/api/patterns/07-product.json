@@ -1,0 +1,26 @@
+{
+  "id": "07-product",
+  "part": "basics",
+  "title": {
+    "zh": "商品详情",
+    "en": "Product detail"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "左半看图，右半选规格下单；图标操作进竖栏，“立即购买”这类文字按钮留在内容里。",
+    "en": "Gallery left, options and purchase right; icon actions go to the vertical bar, text buttons stay in content."
+  },
+  "swiftui": ".safeAreaInset(edge: .bottom) { purchaseBar }",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/07-product.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/07-product.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/07-product.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/07-product.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/07-product.html"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "02-list-detail",
+  "part": "basics",
+  "title": {
+    "zh": "列表 · 详情",
+    "en": "List · detail"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "两栏以折痕为界各占一面；折叠后只留列表，每行加 ›；只有详情栏换成竖向栏。",
+    "en": "Columns meet at the hinge; closed shows the list with disclosure arrows; only the detail column gets the vertical bar."
+  },
+  "swiftui": "NavigationSplitView { list } detail: { detail }",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/02-list-detail.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/02-list-detail.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/02-list-detail.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/02-list-detail.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/02-list-detail.html"
+  }
+}

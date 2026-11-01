@@ -1,0 +1,58 @@
+{
+  "device": {
+    "outer": {
+      "pt": [
+        466,
+        678
+      ],
+      "sizeClass": "compact",
+      "bars": "right edge, vertical"
+    },
+    "innerPortrait": {
+      "pt": [
+        669,
+        951
+      ],
+      "sizeClass": "regular",
+      "bars": "top and bottom, horizontal"
+    },
+    "innerLandscape": {
+      "pt": [
+        951,
+        669
+      ],
+      "sizeClass": "regular",
+      "bars": "side, vertical"
+    },
+    "appStoreScreenshotsPx": {
+      "outer": [
+        1398,
+        2034
+      ],
+      "inner": [
+        2007,
+        2853
+      ]
+    },
+    "hinge": "Division region while partially folded; zero width when flat."
+  },
+  "rules": [
+    {
+      "zh": "按尺寸类别设计，不按姿态设计：外屏按 Compact，内屏按 Regular。",
+      "en": "Design for size classes, not poses: compact on the outer display, regular on the inner."
+    },
+    {
+      "zh": "能点的东西远离折痕，滚动内容不受限；自定义网格优先用偶数列。",
+      "en": "Keep interactive elements away from the hinge; scrolling content may cross it. Prefer even column counts."
+    },
+    {
+      "zh": "栏改竖向：外屏放右侧，内屏横向放侧边；系统组件自动适配，自己画的不会。",
+      "en": "Bars go vertical: right edge on the outer display, side edge on the inner landscape. System bars adapt; custom ones do not."
+    },
+    {
+      "zh": "内屏三种用法：分栏、重排成两列、Tab 变侧栏。",
+      "en": "Three ways to use the inner display: split view, reflow to two columns, tab bar to sidebar."
+    }
+  ],
+  "updated": "2026-10-31"
+}

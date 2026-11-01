@@ -1,0 +1,25 @@
+{
+  "id": "00-spec",
+  "part": "basics",
+  "title": {
+    "zh": "规范速查",
+    "en": "Spec cheat sheet"
+  },
+  "poses": [
+    "closed",
+    "open"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "三种屏幕形态的尺寸、尺寸类别和栏的位置，加 4 条核心规则。",
+    "en": "Sizes, size classes and bar placement for the three display states, plus the four core rules."
+  },
+  "swiftui": null,
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/00-spec.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/00-spec.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/00-spec.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/00-spec.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/00-spec.html"
+  }
+}

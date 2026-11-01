@@ -1,0 +1,26 @@
+{
+  "id": "13-canvas-inspector",
+  "part": "basics",
+  "title": {
+    "zh": "画布 + 工具面板",
+    "en": "Canvas + inspector"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "画布一面、参数一面；竖栏顺序：关闭 → 完成 → 工具。",
+    "en": "Canvas on one half, parameters on the other; vertical bar order: close, done, tools."
+  },
+  "swiftui": ".inspector(isPresented: $show) { panel }",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/13-canvas-inspector.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/13-canvas-inspector.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/13-canvas-inspector.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/13-canvas-inspector.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/13-canvas-inspector.html"
+  }
+}

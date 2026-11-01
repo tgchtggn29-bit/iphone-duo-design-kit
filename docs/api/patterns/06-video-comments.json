@@ -1,0 +1,26 @@
+{
+  "id": "06-video-comments",
+  "part": "basics",
+  "title": {
+    "zh": "视频 + 评论",
+    "en": "Video + comments"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "视频左半、评论右半；折叠后简介和评论合成分段 Tab；播放不中断。",
+    "en": "Video on one half, comments on the other; closed merges details and comments into a segmented control; playback never restarts."
+  },
+  "swiftui": "VideoPlayer(…).aspectRatio(16/9, contentMode: .fit)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/06-video-comments.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/06-video-comments.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/06-video-comments.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/06-video-comments.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/06-video-comments.html"
+  }
+}

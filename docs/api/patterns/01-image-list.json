@@ -1,0 +1,25 @@
+{
+  "id": "01-image-list",
+  "part": "basics",
+  "title": {
+    "zh": "图片 + 列表",
+    "en": "Image + list"
+  },
+  "poses": [
+    "closed",
+    "open"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "同一套组件只换容器方向：展开横排，折叠竖排；折叠时图片压到约 1/3 屏高。",
+    "en": "Same components, different container axis: side by side when open, stacked when closed, image shrunk to about a third."
+  },
+  "swiftui": "AnyLayout(isWide ? HStackLayout() : VStackLayout())",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/01-image-list.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/01-image-list.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/01-image-list.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/01-image-list.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/01-image-list.html"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "12-dashboard",
+  "part": "basics",
+  "title": {
+    "zh": "数据卡片重排",
+    "en": "Dashboard reflow"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "4 个指标拆成两组各占一面，图表不横跨折痕；放不下就换行，不压缩字号。",
+    "en": "Split KPI tiles into pairs per half, keep charts off the hinge, wrap instead of shrinking type."
+  },
+  "swiftui": "LazyVGrid(columns: isWide ? cols4 : cols2)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/12-dashboard.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/12-dashboard.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/12-dashboard.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/12-dashboard.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/12-dashboard.html"
+  }
+}

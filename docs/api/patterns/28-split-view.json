@@ -1,0 +1,24 @@
+{
+  "id": "28-split-view",
+  "part": "scenes",
+  "title": {
+    "zh": "分屏多任务",
+    "en": "Split View multitasking"
+  },
+  "poses": [
+    "open"
+  ],
+  "ref": "Fantastical · Cardhop",
+  "summary": {
+    "zh": "你的 App 可能只拿到半块屏，必须按 Compact 也好用；分屏时各自的竖栏靠外侧。",
+    "en": "Your app may get half the screen and must work as compact; each app keeps its bar on its outer edge."
+  },
+  "swiftui": "Read scene size, never UIScreen.main",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/28-split-view.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/28-split-view.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/28-split-view.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/28-split-view.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/28-split-view.html"
+  }
+}

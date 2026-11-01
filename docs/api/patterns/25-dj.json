@@ -1,0 +1,26 @@
+{
+  "id": "25-dj",
+  "part": "scenes",
+  "title": {
+    "zh": "DJ 双碟 · 对称布局",
+    "en": "DJ decks · mirrored layout"
+  },
+  "poses": [
+    "open",
+    "book",
+    "closed"
+  ],
+  "ref": "edjing Mix",
+  "summary": {
+    "zh": "两件对等的东西一面一个；横跨中线的推子半折时拆成两侧各一个。",
+    "en": "Two equal objects, one per half; a control spanning the centre splits into two when folded."
+  },
+  "swiftui": null,
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/25-dj.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/25-dj.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/25-dj.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/25-dj.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/25-dj.html"
+  }
+}

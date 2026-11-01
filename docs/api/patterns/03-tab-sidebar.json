@@ -1,0 +1,25 @@
+{
+  "id": "03-tab-sidebar",
+  "part": "basics",
+  "title": {
+    "zh": "Tab 变侧栏",
+    "en": "Tab bar to sidebar"
+  },
+  "poses": [
+    "closed",
+    "open"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "内容密集的 App 在内屏把 Tab 升级成带文字的侧栏；外屏 Tab 在右侧竖排、靠下。",
+    "en": "Dense apps turn the tab bar into a labelled sidebar on the inner display; on the outer display tabs sit low on the right edge."
+  },
+  "swiftui": "TabView { … }.tabViewStyle(.sidebarAdaptable)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/03-tab-sidebar.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/03-tab-sidebar.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/03-tab-sidebar.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/03-tab-sidebar.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/03-tab-sidebar.html"
+  }
+}

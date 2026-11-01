@@ -1,0 +1,25 @@
+{
+  "id": "10-map-sheet",
+  "part": "basics",
+  "title": {
+    "zh": "地图 + 抽屉",
+    "en": "Map + sheet"
+  },
+  "poses": [
+    "closed",
+    "open"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "地图铺满；同一个面板宽屏浮在左侧，窄屏变三档底部抽屉。",
+    "en": "Full-bleed map; the same panel floats on the side when wide and becomes a three-detent sheet when compact."
+  },
+  "swiftui": ".presentationDetents([.height(120), .medium, .large])",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/10-map-sheet.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/10-map-sheet.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/10-map-sheet.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/10-map-sheet.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/10-map-sheet.html"
+  }
+}

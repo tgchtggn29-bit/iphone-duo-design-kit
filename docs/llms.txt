@@ -1,0 +1,42 @@
+# iPhone Duo Design Kit
+
+> 29 layout patterns for iPhone Duo (Apple's foldable iPhone): outer and inner display, book and tabletop poses, vertical bars, hinge avoidance. Content CC BY 4.0.
+
+## Machine-readable
+
+- [Index of all patterns](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/index.json): ids, titles, poses, per-pattern URLs
+- [Device facts and core rules](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/rules.json)
+- [Full data](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/patterns.json): every pattern in one file
+- [Agent skill](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/skill/SKILL.md): instructions for adapting or reviewing a screen
+
+## Patterns
+
+- [00-spec Spec cheat sheet](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/00-spec.json): Sizes, size classes and bar placement for the three display states, plus the four core rules.
+- [01-image-list Image + list](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/01-image-list.json): Same components, different container axis: side by side when open, stacked when closed, image shrunk to about a third.
+- [02-list-detail List · detail](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/02-list-detail.json): Columns meet at the hinge; closed shows the list with disclosure arrows; only the detail column gets the vertical bar.
+- [03-tab-sidebar Tab bar to sidebar](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/03-tab-sidebar.json): Dense apps turn the tab bar into a labelled sidebar on the inner display; on the outer display tabs sit low on the right edge.
+- [04-even-grid Even-column grid](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/04-even-grid.json): Six columns as three per half so the hinge lands in a gutter; set a minimum cell width instead of a fixed count.
+- [05-reader Single page to spread](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/05-reader.json): The spine sits on the hinge; keep line length readable; restore position by paragraph, not page number.
+- [06-video-comments Video + comments](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/06-video-comments.json): Video on one half, comments on the other; closed merges details and comments into a segmented control; playback never restarts.
+- [07-product Product detail](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/07-product.json): Gallery left, options and purchase right; icon actions go to the vertical bar, text buttons stay in content.
+- [08-chat Conversations + chat](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/08-chat.json): When closing, stay in the open conversation instead of jumping back to the list; keep the draft.
+- [09-calendar Month + agenda](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/09-calendar.json): Month grid on one half, agenda on the other; closed collapses to a week strip and keeps the selected date.
+- [10-map-sheet Map + sheet](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/10-map-sheet.json): Full-bleed map; the same panel floats on the side when wide and becomes a three-detent sheet when compact.
+- [11-settings Grouped settings](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/11-settings.json): Show categories and options side by side when there is room; toggles stay in content, not in the bar.
+- [12-dashboard Dashboard reflow](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/12-dashboard.json): Split KPI tiles into pairs per half, keep charts off the hinge, wrap instead of shrinking type.
+- [13-canvas-inspector Canvas + inspector](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/13-canvas-inspector.json): Canvas on one half, parameters on the other; vertical bar order: close, done, tools.
+- [14-player-queue Player + queue](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/14-player-queue.json): Now playing on one half, up next on the other; in tent pose, artwork up top and controls below.
+- [15-vertical-bars Vertical bars](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/15-vertical-bars.json): Top to bottom: back/close, primary action, secondary tools, overflow, tab bar. Icons only. Custom bottom bars do not turn vertical.
+- [16-avoid-hinge Avoid the hinge](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/16-avoid-hinge.json): Book pose moves alerts to one side; tabletop puts viewing up top and touch below; switch three columns to two; scrolling content is exempt.
+- [17-sports Live sports · tabletop](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/17-sports.json): The upright half plays the game, the flat half shows stats and actions; video height equals the top half.
+- [18-recipe Recipe · kitchen counter](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/18-recipe.json): Top half shows only the current step in large type; a 60pt+ Next button sits below; keep the screen awake.
+- [19-flight Flight tracking · glanceable](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/19-flight.json): A propped-up gauge: one big number, dark and dim, almost no interaction.
+- [20-fitness Workout · one app, four poses](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/20-fitness.json): One class in four poses with the same hierarchy; the farther from the hand, the fewer buttons and the larger the type.
+- [21-dual-camera Dual display · camera preview](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/21-dual-camera.json): The photographer controls the inner display; the subject sees the preview and countdown outside, with no buttons there.
+- [22-meeting Video meeting](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/22-meeting.json): Shared content on one half, participants on the other in an even grid; leave sits at the bottom of the bar.
+- [23-paywall Paywall · capped width](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/23-paywall.json): Full-width background, content capped at 600pt, CTA at 400pt; system close button; a centred CTA lands on the hinge when folded.
+- [24-video-edit Video editing · spanning timeline](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/24-video-edit.json): Preview and parameters on separate halves, a full-width timeline below; the scrolling timeline may cross the hinge.
+- [25-dj DJ decks · mirrored layout](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/25-dj.json): Two equal objects, one per half; a control spanning the centre splits into two when folded.
+- [26-feed Shopping feed · pinch for columns](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/26-feed.json): Pinch between 2, 4 and 6 columns; even steps only, so the hinge always lands in a gutter.
+- [27-fold-action Fold as an action](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/27-fold-action.json): Browse clips closed, keep watching open; pick an album open, close to play; state must carry over.
+- [28-split-view Split View multitasking](https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/28-split-view.json): Your app may get half the screen and must work as compact; each app keeps its bar on its outer edge.

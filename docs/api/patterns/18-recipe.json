@@ -1,0 +1,26 @@
+{
+  "id": "18-recipe",
+  "part": "scenes",
+  "title": {
+    "zh": "菜谱 · 厨房台面",
+    "en": "Recipe · kitchen counter"
+  },
+  "poses": [
+    "table",
+    "open",
+    "closed"
+  ],
+  "ref": "NYT Cooking",
+  "summary": {
+    "zh": "上半只放当前一步、字号放大；“下一步”放下半做到 60pt 以上；屏幕常亮。",
+    "en": "Top half shows only the current step in large type; a 60pt+ Next button sits below; keep the screen awake."
+  },
+  "swiftui": "UIApplication.shared.isIdleTimerDisabled = true",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/18-recipe.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/18-recipe.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/18-recipe.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/18-recipe.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/18-recipe.html"
+  }
+}

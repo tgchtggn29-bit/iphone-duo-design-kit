@@ -1,0 +1,26 @@
+{
+  "id": "17-sports",
+  "part": "scenes",
+  "title": {
+    "zh": "体育直播 · 桌面姿态",
+    "en": "Live sports · tabletop"
+  },
+  "poses": [
+    "table",
+    "open",
+    "closed"
+  ],
+  "ref": "MLB",
+  "summary": {
+    "zh": "立起的一半看比赛，平放的一半看数据和竞猜；视频高度等于上半屏。",
+    "en": "The upright half plays the game, the flat half shows stats and actions; video height equals the top half."
+  },
+  "swiftui": "Arrangement split mode (iOS 27.1, confirm against the SDK)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/17-sports.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/17-sports.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/17-sports.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/17-sports.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/17-sports.html"
+  }
+}

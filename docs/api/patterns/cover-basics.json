@@ -1,0 +1,19 @@
+{
+  "id": "cover-basics",
+  "part": "cover",
+  "title": {
+    "zh": "封面 · 同一份内容，两种屏幕",
+    "en": "Cover · One content, two screens"
+  },
+  "poses": [],
+  "ref": null,
+  "summary": null,
+  "swiftui": null,
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/cover-basics.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/cover-basics.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/cover-basics.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/cover-basics.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/cover-basics.html"
+  }
+}

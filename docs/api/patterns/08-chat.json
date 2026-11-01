@@ -1,0 +1,26 @@
+{
+  "id": "08-chat",
+  "part": "basics",
+  "title": {
+    "zh": "会话 + 聊天",
+    "en": "Conversations + chat"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "折叠后停在正在聊的对话，不跳回列表；草稿不丢。",
+    "en": "When closing, stay in the open conversation instead of jumping back to the list; keep the draft."
+  },
+  "swiftui": "NavigationSplitView(preferredCompactColumn: $column)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/08-chat.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/08-chat.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/08-chat.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/08-chat.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/08-chat.html"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "20-fitness",
+  "part": "scenes",
+  "title": {
+    "zh": "健身跟练 · 一个 App 四种姿态",
+    "en": "Workout · one app, four poses"
+  },
+  "poses": [
+    "closed",
+    "book",
+    "table",
+    "tent"
+  ],
+  "ref": "Wakeout",
+  "summary": {
+    "zh": "同一节课四种摆法，内容和层级不变；离手越远，按钮越少、字越大。",
+    "en": "One class in four poses with the same hierarchy; the farther from the hand, the fewer buttons and the larger the type."
+  },
+  "swiftui": "horizontalSizeClass first, pose-specific layouts second",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/20-fitness.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/20-fitness.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/20-fitness.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/20-fitness.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/20-fitness.html"
+  }
+}

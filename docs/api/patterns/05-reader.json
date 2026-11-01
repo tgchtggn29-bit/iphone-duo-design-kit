@@ -1,0 +1,26 @@
+{
+  "id": "05-reader",
+  "part": "basics",
+  "title": {
+    "zh": "单页 → 双页",
+    "en": "Single page to spread"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "书脊对准折痕；中文一行 30–40 字；切换时按段落定位，不按页码。",
+    "en": "The spine sits on the hinge; keep line length readable; restore position by paragraph, not page number."
+  },
+  "swiftui": "ViewThatFits { spread; singlePage }",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/05-reader.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/05-reader.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/05-reader.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/05-reader.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/05-reader.html"
+  }
+}

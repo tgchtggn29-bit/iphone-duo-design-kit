@@ -1,0 +1,26 @@
+{
+  "id": "26-feed",
+  "part": "scenes",
+  "title": {
+    "zh": "电商瀑布流 · 捏合调列数",
+    "en": "Shopping feed · pinch for columns"
+  },
+  "poses": [
+    "open",
+    "book",
+    "closed"
+  ],
+  "ref": "Taobao · Rednote",
+  "summary": {
+    "zh": "双指捏合切换 2/4/6 列，只给偶数档，折痕永远落在列缝。",
+    "en": "Pinch between 2, 4 and 6 columns; even steps only, so the hinge always lands in a gutter."
+  },
+  "swiftui": "MagnifyGesture() → LazyVGrid columns",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/26-feed.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/26-feed.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/26-feed.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/26-feed.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/26-feed.html"
+  }
+}

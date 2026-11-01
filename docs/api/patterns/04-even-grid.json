@@ -1,0 +1,26 @@
+{
+  "id": "04-even-grid",
+  "part": "basics",
+  "title": {
+    "zh": "偶数列网格",
+    "en": "Even-column grid"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "内屏 6 列 = 左右各 3 列，折痕落在列缝；不写死列数，写每格最小宽度。",
+    "en": "Six columns as three per half so the hinge lands in a gutter; set a minimum cell width instead of a fixed count."
+  },
+  "swiftui": "LazyVGrid(columns: [GridItem(.adaptive(minimum: 88))])",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/04-even-grid.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/04-even-grid.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/04-even-grid.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/04-even-grid.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/04-even-grid.html"
+  }
+}

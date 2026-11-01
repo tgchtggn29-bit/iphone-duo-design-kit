@@ -1,0 +1,437 @@
+{
+  "name": "iphone-duo-design-kit",
+  "version": "1.0.0",
+  "updated": "2026-10-31",
+  "license": {
+    "content": "CC BY 4.0",
+    "code": "MIT"
+  },
+  "attribution": "iPhone Duo Design Kit · https://github.com/tgchtggn29-bit/iphone-duo-design-kit · CC BY 4.0",
+  "endpoints": {
+    "index": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/index.json",
+    "rules": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/rules.json",
+    "pattern": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/{id}.json",
+    "all": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/patterns.json",
+    "skill": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/skill/SKILL.md",
+    "llms": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/llms.txt"
+  },
+  "count": 31,
+  "patterns": [
+    {
+      "id": "cover-basics",
+      "part": "cover",
+      "title": {
+        "zh": "封面 · 同一份内容，两种屏幕",
+        "en": "Cover · One content, two screens"
+      },
+      "poses": [],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/cover-basics.json"
+    },
+    {
+      "id": "00-spec",
+      "part": "basics",
+      "title": {
+        "zh": "规范速查",
+        "en": "Spec cheat sheet"
+      },
+      "poses": [
+        "closed",
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/00-spec.json"
+    },
+    {
+      "id": "01-image-list",
+      "part": "basics",
+      "title": {
+        "zh": "图片 + 列表",
+        "en": "Image + list"
+      },
+      "poses": [
+        "closed",
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/01-image-list.json"
+    },
+    {
+      "id": "02-list-detail",
+      "part": "basics",
+      "title": {
+        "zh": "列表 · 详情",
+        "en": "List · detail"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/02-list-detail.json"
+    },
+    {
+      "id": "03-tab-sidebar",
+      "part": "basics",
+      "title": {
+        "zh": "Tab 变侧栏",
+        "en": "Tab bar to sidebar"
+      },
+      "poses": [
+        "closed",
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/03-tab-sidebar.json"
+    },
+    {
+      "id": "04-even-grid",
+      "part": "basics",
+      "title": {
+        "zh": "偶数列网格",
+        "en": "Even-column grid"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/04-even-grid.json"
+    },
+    {
+      "id": "05-reader",
+      "part": "basics",
+      "title": {
+        "zh": "单页 → 双页",
+        "en": "Single page to spread"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/05-reader.json"
+    },
+    {
+      "id": "06-video-comments",
+      "part": "basics",
+      "title": {
+        "zh": "视频 + 评论",
+        "en": "Video + comments"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/06-video-comments.json"
+    },
+    {
+      "id": "07-product",
+      "part": "basics",
+      "title": {
+        "zh": "商品详情",
+        "en": "Product detail"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/07-product.json"
+    },
+    {
+      "id": "08-chat",
+      "part": "basics",
+      "title": {
+        "zh": "会话 + 聊天",
+        "en": "Conversations + chat"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/08-chat.json"
+    },
+    {
+      "id": "09-calendar",
+      "part": "basics",
+      "title": {
+        "zh": "月历 + 日程",
+        "en": "Month + agenda"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/09-calendar.json"
+    },
+    {
+      "id": "10-map-sheet",
+      "part": "basics",
+      "title": {
+        "zh": "地图 + 抽屉",
+        "en": "Map + sheet"
+      },
+      "poses": [
+        "closed",
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/10-map-sheet.json"
+    },
+    {
+      "id": "11-settings",
+      "part": "basics",
+      "title": {
+        "zh": "设置分组",
+        "en": "Grouped settings"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/11-settings.json"
+    },
+    {
+      "id": "12-dashboard",
+      "part": "basics",
+      "title": {
+        "zh": "数据卡片重排",
+        "en": "Dashboard reflow"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/12-dashboard.json"
+    },
+    {
+      "id": "13-canvas-inspector",
+      "part": "basics",
+      "title": {
+        "zh": "画布 + 工具面板",
+        "en": "Canvas + inspector"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/13-canvas-inspector.json"
+    },
+    {
+      "id": "14-player-queue",
+      "part": "basics",
+      "title": {
+        "zh": "播放 + 队列",
+        "en": "Player + queue"
+      },
+      "poses": [
+        "closed",
+        "open",
+        "book",
+        "tent"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/14-player-queue.json"
+    },
+    {
+      "id": "15-vertical-bars",
+      "part": "topic",
+      "title": {
+        "zh": "竖向工具栏",
+        "en": "Vertical bars"
+      },
+      "poses": [
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/15-vertical-bars.json"
+    },
+    {
+      "id": "16-avoid-hinge",
+      "part": "topic",
+      "title": {
+        "zh": "避开折痕",
+        "en": "Avoid the hinge"
+      },
+      "poses": [
+        "book",
+        "table"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/16-avoid-hinge.json"
+    },
+    {
+      "id": "cover-scenes",
+      "part": "cover",
+      "title": {
+        "zh": "场景篇封面 · 12 个真实场景",
+        "en": "Cover · 12 real-world scenes"
+      },
+      "poses": [],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/cover-scenes.json"
+    },
+    {
+      "id": "17-sports",
+      "part": "scenes",
+      "title": {
+        "zh": "体育直播 · 桌面姿态",
+        "en": "Live sports · tabletop"
+      },
+      "poses": [
+        "table",
+        "open",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/17-sports.json"
+    },
+    {
+      "id": "18-recipe",
+      "part": "scenes",
+      "title": {
+        "zh": "菜谱 · 厨房台面",
+        "en": "Recipe · kitchen counter"
+      },
+      "poses": [
+        "table",
+        "open",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/18-recipe.json"
+    },
+    {
+      "id": "19-flight",
+      "part": "scenes",
+      "title": {
+        "zh": "航班追踪 · 一眼可读",
+        "en": "Flight tracking · glanceable"
+      },
+      "poses": [
+        "table",
+        "open",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/19-flight.json"
+    },
+    {
+      "id": "20-fitness",
+      "part": "scenes",
+      "title": {
+        "zh": "健身跟练 · 一个 App 四种姿态",
+        "en": "Workout · one app, four poses"
+      },
+      "poses": [
+        "closed",
+        "book",
+        "table",
+        "tent"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/20-fitness.json"
+    },
+    {
+      "id": "21-dual-camera",
+      "part": "scenes",
+      "title": {
+        "zh": "双屏同显 · 拍照预览",
+        "en": "Dual display · camera preview"
+      },
+      "poses": [
+        "dual"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/21-dual-camera.json"
+    },
+    {
+      "id": "22-meeting",
+      "part": "scenes",
+      "title": {
+        "zh": "视频会议",
+        "en": "Video meeting"
+      },
+      "poses": [
+        "book",
+        "open",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/22-meeting.json"
+    },
+    {
+      "id": "23-paywall",
+      "part": "scenes",
+      "title": {
+        "zh": "付费墙 · 限宽居中",
+        "en": "Paywall · capped width"
+      },
+      "poses": [
+        "open",
+        "book",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/23-paywall.json"
+    },
+    {
+      "id": "24-video-edit",
+      "part": "scenes",
+      "title": {
+        "zh": "视频剪辑 · 时间线横跨",
+        "en": "Video editing · spanning timeline"
+      },
+      "poses": [
+        "book",
+        "open",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/24-video-edit.json"
+    },
+    {
+      "id": "25-dj",
+      "part": "scenes",
+      "title": {
+        "zh": "DJ 双碟 · 对称布局",
+        "en": "DJ decks · mirrored layout"
+      },
+      "poses": [
+        "open",
+        "book",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/25-dj.json"
+    },
+    {
+      "id": "26-feed",
+      "part": "scenes",
+      "title": {
+        "zh": "电商瀑布流 · 捏合调列数",
+        "en": "Shopping feed · pinch for columns"
+      },
+      "poses": [
+        "open",
+        "book",
+        "closed"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/26-feed.json"
+    },
+    {
+      "id": "27-fold-action",
+      "part": "scenes",
+      "title": {
+        "zh": "开合即交互",
+        "en": "Fold as an action"
+      },
+      "poses": [
+        "closed",
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/27-fold-action.json"
+    },
+    {
+      "id": "28-split-view",
+      "part": "scenes",
+      "title": {
+        "zh": "分屏多任务",
+        "en": "Split View multitasking"
+      },
+      "poses": [
+        "open"
+      ],
+      "url": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/28-split-view.json"
+    }
+  ]
+}

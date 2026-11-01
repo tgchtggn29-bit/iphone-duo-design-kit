@@ -1,0 +1,26 @@
+{
+  "id": "24-video-edit",
+  "part": "scenes",
+  "title": {
+    "zh": "视频剪辑 · 时间线横跨",
+    "en": "Video editing · spanning timeline"
+  },
+  "poses": [
+    "book",
+    "open",
+    "closed"
+  ],
+  "ref": "Edits · VLLO",
+  "summary": {
+    "zh": "预览一面、参数一面，时间线铺满底部；时间线可滚动，可以横跨折痕。",
+    "en": "Preview and parameters on separate halves, a full-width timeline below; the scrolling timeline may cross the hinge."
+  },
+  "swiftui": ".inspector",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/24-video-edit.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/24-video-edit.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/24-video-edit.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/24-video-edit.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/24-video-edit.html"
+  }
+}

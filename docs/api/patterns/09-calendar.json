@@ -1,0 +1,26 @@
+{
+  "id": "09-calendar",
+  "part": "basics",
+  "title": {
+    "zh": "月历 + 日程",
+    "en": "Month + agenda"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "月历整块放左面，日程放右面；折叠后收成一周横条，选中日期不丢。",
+    "en": "Month grid on one half, agenda on the other; closed collapses to a week strip and keeps the selected date."
+  },
+  "swiftui": "@State var selected: Date",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/09-calendar.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/09-calendar.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/09-calendar.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/09-calendar.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/09-calendar.html"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "15-vertical-bars",
+  "part": "topic",
+  "title": {
+    "zh": "竖向工具栏",
+    "en": "Vertical bars"
+  },
+  "poses": [
+    "closed"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "从上到下：返回/关闭 → 主操作 → 次要工具 → 溢出菜单 → Tab 栏；只放图标；自己画的底栏不会自动变竖。",
+    "en": "Top to bottom: back/close, primary action, secondary tools, overflow, tab bar. Icons only. Custom bottom bars do not turn vertical."
+  },
+  "swiftui": ".toolbar { … } with system TabView",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/15-vertical-bars.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/15-vertical-bars.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/15-vertical-bars.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/15-vertical-bars.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/15-vertical-bars.html"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "27-fold-action",
+  "part": "scenes",
+  "title": {
+    "zh": "开合即交互",
+    "en": "Fold as an action"
+  },
+  "poses": [
+    "closed",
+    "open"
+  ],
+  "ref": "Netflix · Deck-Man",
+  "summary": {
+    "zh": "折叠刷短片、打开接着看；打开选专辑、合上开始播；状态必须连续。",
+    "en": "Browse clips closed, keep watching open; pick an album open, close to play; state must carry over."
+  },
+  "swiftui": "onGeometryChange",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/27-fold-action.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/27-fold-action.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/27-fold-action.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/27-fold-action.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/27-fold-action.html"
+  }
+}

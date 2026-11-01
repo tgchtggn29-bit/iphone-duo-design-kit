@@ -1,0 +1,26 @@
+{
+  "id": "19-flight",
+  "part": "scenes",
+  "title": {
+    "zh": "航班追踪 · 一眼可读",
+    "en": "Flight tracking · glanceable"
+  },
+  "poses": [
+    "table",
+    "open",
+    "closed"
+  ],
+  "ref": "Flighty",
+  "summary": {
+    "zh": "支起来当仪表：一个大数字、深色低亮、几乎不需要操作。",
+    "en": "A propped-up gauge: one big number, dark and dim, almost no interaction."
+  },
+  "swiftui": "TimelineView(.periodic(from: .now, by: 60))",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/19-flight.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/19-flight.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/19-flight.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/19-flight.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/19-flight.html"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "11-settings",
+  "part": "basics",
+  "title": {
+    "zh": "设置分组",
+    "en": "Grouped settings"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "放得下两栏就别再点进下一层；开关属于编辑控件，留在内容里。",
+    "en": "Show categories and options side by side when there is room; toggles stay in content, not in the bar."
+  },
+  "swiftui": "List { Section { … } }.listStyle(.insetGrouped)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/11-settings.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/11-settings.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/11-settings.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/11-settings.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/11-settings.html"
+  }
+}

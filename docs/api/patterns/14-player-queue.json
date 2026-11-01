@@ -1,0 +1,27 @@
+{
+  "id": "14-player-queue",
+  "part": "basics",
+  "title": {
+    "zh": "播放 + 队列",
+    "en": "Player + queue"
+  },
+  "poses": [
+    "closed",
+    "open",
+    "book",
+    "tent"
+  ],
+  "ref": null,
+  "summary": {
+    "zh": "左面正在播放，右面接下来；帐篷姿态封面在上、按钮在下。",
+    "en": "Now playing on one half, up next on the other; in tent pose, artwork up top and controls below."
+  },
+  "swiftui": "@Environment(\\.horizontalSizeClass) var size",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/14-player-queue.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/14-player-queue.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/14-player-queue.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/14-player-queue.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/14-player-queue.html"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "21-dual-camera",
+  "part": "scenes",
+  "title": {
+    "zh": "双屏同显 · 拍照预览",
+    "en": "Dual display · camera preview"
+  },
+  "poses": [
+    "dual"
+  ],
+  "ref": "Camera · Duo Preview",
+  "summary": {
+    "zh": "内屏给拍的人操作，外屏给被拍的人看预览和倒计时；外屏不放按钮。",
+    "en": "The photographer controls the inner display; the subject sees the preview and countdown outside, with no buttons there."
+  },
+  "swiftui": "Scene accessory (iOS 27.1, confirm against the SDK)",
+  "urls": {
+    "api": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/api/patterns/21-dual-camera.json",
+    "preview": "https://tgchtggn29-bit.github.io/iphone-duo-design-kit/assets/cards/21-dual-camera.jpg",
+    "png2x": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/exports/png/21-dual-camera.png",
+    "html": "https://raw.githubusercontent.com/tgchtggn29-bit/iphone-duo-design-kit/main/cards/21-dual-camera.html",
+    "source": "https://github.com/tgchtggn29-bit/iphone-duo-design-kit/blob/main/cards/21-dual-camera.html"
+  }
+}
